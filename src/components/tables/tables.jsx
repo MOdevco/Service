@@ -14,6 +14,7 @@ import {
   Input,
 } from "@chakra-ui/react";
 
+<<<<<<< HEAD
 const Tables = ({ title }) => {
   const [open, setopen] = useState(false);
   const handleClick = () => setopen(!open)
@@ -22,6 +23,15 @@ const Tables = ({ title }) => {
       <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"35px"}>
         <Text>{title}</Text>
         <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle /> : <AiFillPlusCircle />}</Button>
+=======
+const Tables = ({ title,handleOpen }) => {
+  
+  return (
+    <Box>
+      <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"55px"} pb={'20px'}>
+        <Text fontSize={'20px'} color={"#404E67"} fontWeight={'500'}>{title}</Text>
+        <AiFillPlusCircle onClick={handleOpen} color="#4CAF50" fontSize={'18px'}/>
+>>>>>>> 435a84cc7608676adf795817a0a0a52ae61e0a36
       </Box>
       {open && <Box pb={'20px'} display={"flex"} alignItems={"center"} gap={'25px'}>
         <Input

@@ -1,5 +1,9 @@
 import { Box, Button, Input, Text } from "@chakra-ui/react";
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+import React from "react";
+>>>>>>> 435a84cc7608676adf795817a0a0a52ae61e0a36
 import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import { MdOutlineMoreVert } from "react-icons/md";
 import {
@@ -27,8 +31,12 @@ function TovarTable({ title }) {
         <Text color={"#404E67"} fontSize={"20px"} fontWeight={"500"}>
           {title}{" "}
         </Text>
+<<<<<<< HEAD
         <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle /> : <AiFillPlusCircle />}</Button>
         
+=======
+        <AiFillMinusCircle color="#B10202" fontSize={'18px'}/>
+>>>>>>> 435a84cc7608676adf795817a0a0a52ae61e0a36
       </Box>
 
       {open && <Box pb={"25px"} display={"flex"} alignItems={"center"}>
@@ -77,10 +85,10 @@ function TovarTable({ title }) {
         <Table width={"100%"} rounded={"16px"} fontSize={'19px'}>
           <Thead>
             <Tr bg="#F1F3F9">
-              <Th fontSize={'17px'}>№</Th>
-              <Th fontSize={'17px'}> Nomi</Th>
-              <Th fontSize={'17px'}>Qo’shilgan sana</Th>
-              <Th fontSize={'17px'}>User</Th>
+              <Th color={'#1D2433'} fontSize={'17px'} fontWeight={'bold'} textTransform={'capitalize'}>№</Th>
+              <Th color={'#1D2433'} fontSize={'17px'} fontWeight={'bold'} textTransform={'capitalize'}> Nomi</Th>
+              <Th color={'#1D2433'} fontSize={'17px'} fontWeight={'bold'} textTransform={'capitalize'}>Qo’shilgan sana</Th>
+              <Th color={'#1D2433'} fontSize={'17px'} fontWeight={'bold'} textTransform={'capitalize'}>User</Th>
               <Th></Th>
             </Tr>
           </Thead>
