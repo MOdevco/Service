@@ -1,13 +1,13 @@
 import { Box } from '@chakra-ui/react'
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Home from './pages/home'
+import AsosiyMalumatlar from './pages/AsosiyMalumotlar'
 
 function App() {
   return (
     <Box>
         <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<AsosiyMalumatlar />}></Route>
         </Routes>
     </Box>
   )
