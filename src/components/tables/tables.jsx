@@ -16,7 +16,7 @@ import {
 import axios from "axios";
 import { API } from "../../api";
 
-const Tables = ({ title, name, date }) => {
+const Tables = ({ title }) => {
   const [open, setopen] = useState(false);
   const [data, setData] = useState([]);
   
@@ -74,58 +74,7 @@ const Tables = ({ title, name, date }) => {
         </Box>
       </Box>}
 
-      <TableContainer shadow={"0px 2px 8px 0px rgba(0, 0, 0, 0.12)"}>
-        <Table width={"100%"} rounded={"16px"} fontSize={'19px'}>
-          <Thead>
-            <Tr bg="#F1F3F9" >
-              <Th fontWeight={'bold'} color={'#1D2433'} textTransform={'capitalize'} fontSize={'17px'}>№</Th>
-              <Th fontWeight={'bold'} color={'#1D2433'} textTransform={'capitalize'} fontSize={'17px'}> Nomi</Th>
-              <Th fontWeight={'bold'} color={'#1D2433'} textTransform={'capitalize'} fontSize={'17px'}>Qo’shilgan sana</Th>
-              <Th fontWeight={'bold'} color={'#1D2433'} textTransform={'capitalize'} fontSize={'17px'}>User</Th>
-              <Th></Th>
-            </Tr>
-          </Thead>
-          <Tbody>
-                <Tr>
-                  <Td>1</Td>
-                  <Td w={'50%'}>{name}</Td>
-                  <Td>{date}</Td>
-                  <Td>Komiljon Soliyev Xaydarovich</Td>
-                  <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
-                    <MdOutlineMoreVert  size={"29px"} />
-                  </Td>
-                </Tr>
-             
-            <Tr bg={'#F8F9FC'}>
-              <Td>2</Td>
-              <Td>Mobile maxsulotlar</Td>
-              <Td>22 Noy 2023</Td>
-              <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
-                <MdOutlineMoreVert size={"29px"} />
-              </Td>
-            </Tr>
-            <Tr>
-              <Td>3</Td>
-              <Td>Mobile maxsulotlar</Td>
-              <Td>22 Noy 2023</Td>
-              <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
-                <MdOutlineMoreVert size={"29px"} />
-              </Td>
-            </Tr>
-            <Tr bg={'#F8F9FC'}>
-              <Td>3</Td>
-              <Td>Mobile maxsulotlar</Td>
-              <Td>22 Noy 2023</Td>
-              <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
-                <MdOutlineMoreVert size={"29px"} />
-              </Td>
-            </Tr>
-          </Tbody>
-        </Table>
-      </TableContainer>
+    
     </Box>
   );
 };
