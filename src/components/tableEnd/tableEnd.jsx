@@ -28,7 +28,7 @@ function TableEnd({ title }) {
         </Text>
         <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle color="#B10202" /> : <AiFillPlusCircle color="#4CAF50" />}</Button>
       </Box>
-      <Box pb={'20px'} display={"flex"} alignItems={"center"} gap={'75px'}>
+      {open && <Box pb={'20px'} display={"flex"} alignItems={"center"} gap={'75px'}>
         <Input
           width={"20%"}
           placeholder="Ventilyator"
@@ -46,7 +46,7 @@ function TableEnd({ title }) {
         >
           Qo’shish
         </Button>
-      </Box>
+      </Box>}
       <TableContainer shadow={"0px 2px 8px 0px rgba(0, 0, 0, 0.12)"}>
         <Table width={"100%"} rounded={"16px"} fontSize={"19px"}>
           <Thead>
