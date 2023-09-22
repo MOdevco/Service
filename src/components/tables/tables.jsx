@@ -32,12 +32,12 @@ const Tables = ({ title }) => {
             </Tr>
           </Thead>
           <Tbody>
-            <Tr>
+            <Tr >
               <Td>1</Td>
               <Td>Mobile maxsulotlar</Td>
               <Td>22 Noy 2023</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td>
+              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
                 <MdOutlineMoreVert  size={"29px"} />
               </Td>
             </Tr>
@@ -46,7 +46,7 @@ const Tables = ({ title }) => {
               <Td>Mobile maxsulotlar</Td>
               <Td>22 Noy 2023</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td>
+              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
                 <MdOutlineMoreVert size={"29px"} />
               </Td>
             </Tr>
@@ -55,7 +55,7 @@ const Tables = ({ title }) => {
               <Td>Mobile maxsulotlar</Td>
               <Td>22 Noy 2023</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td>
+              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
                 <MdOutlineMoreVert size={"29px"} />
               </Td>
             </Tr>
@@ -64,7 +64,7 @@ const Tables = ({ title }) => {
               <Td>Mobile maxsulotlar</Td>
               <Td>22 Noy 2023</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td>
+              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
                 <MdOutlineMoreVert size={"29px"} />
               </Td>
             </Tr>
