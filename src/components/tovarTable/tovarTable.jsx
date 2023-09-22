@@ -1,9 +1,5 @@
 import { Box, Button, Input, Text } from "@chakra-ui/react";
-<<<<<<< HEAD
 import React, { useState } from "react";
-=======
-import React from "react";
->>>>>>> 435a84cc7608676adf795817a0a0a52ae61e0a36
 import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import { MdOutlineMoreVert } from "react-icons/md";
 import {
