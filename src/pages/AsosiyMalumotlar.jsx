@@ -6,7 +6,7 @@ function AsosiyMalumatlar() {
    <Box>
         <Box>
             <Box>
-                <Heading size>iStore</Heading>
+                
             </Box>
         </Box>
    </Box>
