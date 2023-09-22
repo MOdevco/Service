@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 
 const Tables = ({ title }) => {
-  const [open, setopen] = useState(true);
+  const [open, setopen] = useState(false);
   const handleClick = () => setopen(!open)
   return (
     <Box>
