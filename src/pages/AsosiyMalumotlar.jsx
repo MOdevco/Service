@@ -7,7 +7,6 @@ function AsosiyMalumatlar() {
    <Box>
         <Box>
             <Box>
-                <Asosiybody/>
             </Box>
         </Box>
    </Box>
