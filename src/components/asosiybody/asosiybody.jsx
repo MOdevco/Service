@@ -8,12 +8,12 @@ import TovarTable from "../tovarTable/tovarTable";
 import TableEnd from "../tableEnd/tableEnd";
 
 const Asosiybody = () => {
-
+ 
   return (
     <Box>
       {/* birinvhi table */}
       <Box>
-        <Tables title={"Tovar sotiladigan qurilmalar"} />
+         <Tables title={"Tovar sotiladigan qurilmalar"} />
       </Box>
 
       <Box>

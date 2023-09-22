@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import AsosiyMalumatlar from "./pages/AsosiyMalumotlar";
 import Asosiybody from "./components/asosiybody/asosiybody";
 import Navbar from "./components/navbar/navbar";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<AsosiyMalumatlar />}></Route>
           <Route path="/asosiy" element={<Asosiybody />}></Route>
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
       </Box>
     </Box>
