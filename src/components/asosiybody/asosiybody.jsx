@@ -14,8 +14,8 @@ import {
 
 const Asosiybody = () => {
   return (
-    <Box w={'1362px'} m={' auto'} >
-      <TableContainer w={'1419px'} m={'0 50px'}>
+    <Box>
+      <TableContainer >
         <Box display={'Flex'} alignItems={'center'} gap="10px" mt={'35px'}>
             <Text>Tovar sotiladigan qurilmalar</Text>
             <AiFillPlusCircle />
