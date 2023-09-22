@@ -27,7 +27,7 @@ function TovarTable({ title }) {
         <Text color={"#404E67"} fontSize={"20px"} fontWeight={"500"}>
           {title}{" "}
         </Text>
-        <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle /> : <AiFillPlusCircle />}</Button>
+        <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle color="#B10202"/> : <AiFillPlusCircle />}</Button>
         
       </Box>
 
