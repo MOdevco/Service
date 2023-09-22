@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import { Box } from '@chakra-ui/layout'
-import React from 'react'
-  const Asosiybody = () => {
-  return (
-    <Box>
-  
-=======
-import { Box, Center, Flex, Text } from "@chakra-ui/layout";
+import { Center, Flex, Text } from "@chakra-ui/layout";
 import React from "react";
 import {MdOutlineMoreVert } from 'react-icons/md'
-import {AiFillPlusCircle} from  'react-icons/ai'
+import {AiFillPlusCircle} from 'react-icons/ai'
 import {
   Table,
   Thead,
@@ -66,9 +59,8 @@ const Asosiybody = () => {
           
         </Table>
       </TableContainer>
->>>>>>> 25103ee1fd4ebe1cd005c438f1e0afeaf919ce10
     </Box>
   );
-};
+}
 
-export default Asosiybody;
+export default Asosiybody
