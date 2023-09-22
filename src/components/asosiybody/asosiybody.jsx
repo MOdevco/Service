@@ -12,7 +12,7 @@ const Asosiybody = () => {
 
   
   return (
-    <Box>
+    <Box p={'50px'}>
       {/* birinvhi table */}
      <TableSotuv />
 
