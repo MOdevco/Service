@@ -98,8 +98,8 @@ const Tables = ({ title, name, date }) => {
              
             <Tr bg={'#F8F9FC'}>
               <Td>2</Td>
-              <Td>Mobile maxsulotlar</Td>
-              <Td>22 Noy 2023</Td>
+              <Td>{name}</Td>
+              <Td>{date}</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
               <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
                 <MdOutlineMoreVert size={"29px"} />
@@ -107,8 +107,8 @@ const Tables = ({ title, name, date }) => {
             </Tr>
             <Tr>
               <Td>3</Td>
-              <Td>Mobile maxsulotlar</Td>
-              <Td>22 Noy 2023</Td>
+              <Td>{name}</Td>
+              <Td>{date}</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
               <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
                 <MdOutlineMoreVert size={"29px"} />
