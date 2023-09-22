@@ -1,9 +1,5 @@
 import { Box, Button, Input, Text } from "@chakra-ui/react";
-<<<<<<< HEAD
 import React, { useState } from "react";
-=======
-import React from "react";
->>>>>>> 435a84cc7608676adf795817a0a0a52ae61e0a36
 import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import { MdOutlineMoreVert } from "react-icons/md";
 import {
@@ -16,7 +12,7 @@ import {
   TableContainer,
 } from "@chakra-ui/react";
 function TableEnd({ title }) {
-  const [open, setopen] = useState(false);
+  const [open, setopen] = useState(true);
   const handleClick = () => setopen(!open)
   return (
     <Box>
@@ -30,7 +26,7 @@ function TableEnd({ title }) {
         <Text color={"#404E67"} fontSize={"20px"} fontWeight={"500"}>
           {title}{" "}
         </Text>
-        <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle /> : <AiFillPlusCircle />}</Button>
+        <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle color="#B10202" /> : <AiFillPlusCircle color="#4CAF50" />}</Button>
       </Box>
       {open && <Box pb={'20px'} display={"flex"} alignItems={"center"} gap={'25px'}>
         <Input

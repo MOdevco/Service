@@ -21,7 +21,7 @@ const Tables = ({ title }) => {
     <Box>
       <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"35px"}>
         <Text>{title}</Text>
-        <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle /> : <AiFillPlusCircle />}</Button>
+        <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle color="#B10202" /> : <AiFillPlusCircle color="#4CAF50" />}</Button>
       </Box>
       {open && <Box pb={'20px'} display={"flex"} alignItems={"center"} gap={'25px'}>
         <Input
@@ -47,10 +47,10 @@ const Tables = ({ title }) => {
         <Table width={"100%"} rounded={"16px"} fontSize={'19px'}>
           <Thead>
             <Tr bg="#F1F3F9" >
-              <Th fontSize={'17px'}>№</Th>
-              <Th fontSize={'17px'}> Nomi</Th>
-              <Th fontSize={'17px'}>Qo’shilgan sana</Th>
-              <Th fontSize={'17px'}>User</Th>
+              <Th fontWeight={'bold'} color={'#1D2433'} textTransform={'capitalize'} fontSize={'17px'}>№</Th>
+              <Th fontWeight={'bold'} color={'#1D2433'} textTransform={'capitalize'} fontSize={'17px'}> Nomi</Th>
+              <Th fontWeight={'bold'} color={'#1D2433'} textTransform={'capitalize'} fontSize={'17px'}>Qo’shilgan sana</Th>
+              <Th fontWeight={'bold'} color={'#1D2433'} textTransform={'capitalize'} fontSize={'17px'}>User</Th>
               <Th></Th>
             </Tr>
           </Thead>
