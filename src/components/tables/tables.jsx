@@ -12,12 +12,13 @@ import {
   TableContainer,
 } from "@chakra-ui/react";
 
-const Tables = ({ title }) => {
+const Tables = ({ title,handleOpen }) => {
+  
   return (
     <Box>
       <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"55px"} pb={'20px'}>
         <Text fontSize={'20px'} color={"#404E67"} fontWeight={'500'}>{title}</Text>
-        <AiFillPlusCircle />
+        <AiFillPlusCircle onClick={handleOpen} color="#4CAF50" fontSize={'18px'}/>
       </Box>
 
       <TableContainer shadow={"0px 2px 8px 0px rgba(0, 0, 0, 0.12)"}>

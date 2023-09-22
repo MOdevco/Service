@@ -1,6 +1,6 @@
 import { Box, Button, Input, Text } from "@chakra-ui/react";
 import React from "react";
-import { AiFillPlusCircle } from "react-icons/ai";
+import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import { MdOutlineMoreVert } from "react-icons/md";
 import {
   Table,
@@ -24,9 +24,9 @@ function TableEnd({ title }) {
         <Text color={"#404E67"} fontSize={"20px"} fontWeight={"500"}>
           {title}{" "}
         </Text>
-        <AiFillPlusCircle />
+        <AiFillMinusCircle color="#B10202" fontSize={'18px'}/>
       </Box>
-      <Box pb={'20px'} display={"flex"} alignItems={"center"} gap={'75px'}>
+      <Box pb={"20px"} display={"flex"} alignItems={"center"} gap={"55px"}>
         <Input
           width={"20%"}
           placeholder="Ventilyator"
@@ -49,10 +49,47 @@ function TableEnd({ title }) {
         <Table width={"100%"} rounded={"16px"} fontSize={"19px"}>
           <Thead>
             <Tr bg="#F1F3F9">
-              <Th fontSize={"17px"}>№</Th>
-              <Th fontSize={"17px"}> Nomi</Th>
-              <Th fontSize={"17px"}>Qo’shilgan sana</Th>
-              <Th fontSize={"17px"}>User</Th>
+              <Th
+                fontSize={"17px"}
+                fontWeight={"bold"}
+                textTransform={"capitalize"}
+                color={"#1D2433"}
+              >
+                №
+              </Th>
+              <Th
+                fontSize={"17px"}
+                fontWeight={"bold"}
+                textTransform={"capitalize"}
+                color={"#1D2433"}
+              >
+                {" "}
+                Nomi
+              </Th>
+              <Th
+                fontSize={"17px"}
+                fontWeight={"bold"}
+                textTransform={"capitalize"}
+                color={"#1D2433"}
+              >
+                Qo’shilgan sana
+              </Th>
+              <Th
+                fontSize={"17px"}
+                fontWeight={"bold"}
+                textTransform={"capitalize"}
+                color={"#1D2433"}
+              >
+                Telefon
+              </Th>
+              <Th
+                fontSize={"17px"}
+                fontWeight={"bold"}
+                textTransform={"capitalize"}
+                color={"#1D2433"}
+              >
+                User
+              </Th>
               <Th></Th>
             </Tr>
           </Thead>
@@ -61,8 +98,13 @@ function TableEnd({ title }) {
               <Td>1</Td>
               <Td>Mobile maxsulotlar</Td>
               <Td>22 Noy 2023</Td>
+              <Td>+998 (90) 123-45-67</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
+              <Td
+                display={"flex"}
+                alignItems={"flex-end"}
+                justifyContent={"flex-end"}
+              >
                 <MdOutlineMoreVert size={"29px"} />
               </Td>
             </Tr>
@@ -70,8 +112,13 @@ function TableEnd({ title }) {
               <Td>2</Td>
               <Td>Mobile maxsulotlar</Td>
               <Td>22 Noy 2023</Td>
+              <Td>+998 (90) 123-45-67</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
+              <Td
+                display={"flex"}
+                alignItems={"flex-end"}
+                justifyContent={"flex-end"}
+              >
                 <MdOutlineMoreVert size={"29px"} />
               </Td>
             </Tr>
@@ -79,8 +126,13 @@ function TableEnd({ title }) {
               <Td>3</Td>
               <Td>Mobile maxsulotlar</Td>
               <Td>22 Noy 2023</Td>
+              <Td>+998 (90) 123-45-67</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
+              <Td
+                display={"flex"}
+                alignItems={"flex-end"}
+                justifyContent={"flex-end"}
+              >
                 <MdOutlineMoreVert size={"29px"} />
               </Td>
             </Tr>
@@ -88,8 +140,13 @@ function TableEnd({ title }) {
               <Td>4</Td>
               <Td>Mobile maxsulotlar</Td>
               <Td>22 Noy 2023</Td>
+              <Td>+998 (90) 123-45-67</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
+              <Td
+                display={"flex"}
+                alignItems={"flex-end"}
+                justifyContent={"flex-end"}
+              >
                 <MdOutlineMoreVert size={"29px"} />
               </Td>
             </Tr>
