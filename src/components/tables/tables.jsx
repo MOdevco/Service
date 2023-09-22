@@ -1,5 +1,5 @@
 import { Box, Center, Flex, Text } from "@chakra-ui/layout";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdOutlineMoreVert } from "react-icons/md";
 import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import {
@@ -17,6 +17,11 @@ import {
 const Tables = ({ title }) => {
   const [open, setopen] = useState(false);
   const handleClick = () => setopen(!open)
+
+
+  useEffect(() => {
+    
+  }, [])
   return (
     <Box>
       <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"35px"}>
@@ -79,7 +84,7 @@ const Tables = ({ title }) => {
           <Tbody>
             <Tr >
               <Td>1</Td>
-              <Td>Mobile maxsulotlar</Td>
+              <Td w={'50%'}>Mobile maxsulotlaraaa</Td>
               <Td>22 Noy 2023</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
               <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
