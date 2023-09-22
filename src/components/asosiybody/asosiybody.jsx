@@ -8,15 +8,12 @@ import TovarTable from "../tovarTable/tovarTable";
 import TableEnd from "../tableEnd/tableEnd";
 
 const Asosiybody = () => {
-  const [open,setOpen] = useState(false)
-  const handleOpen = () =>{
-    setOpen(true)
-  }
+ 
   return (
     <Box>
       {/* birinvhi table */}
       <Box>
-        { open && <Tables handleOpen={handleOpen} title={"Tovar sotiladigan qurilmalar"} />}
+         <Tables title={"Tovar sotiladigan qurilmalar"} />
       </Box>
 
       <Box>

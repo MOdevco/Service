@@ -27,12 +27,8 @@ function TovarTable({ title }) {
         <Text color={"#404E67"} fontSize={"20px"} fontWeight={"500"}>
           {title}{" "}
         </Text>
-<<<<<<< HEAD
         <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle /> : <AiFillPlusCircle />}</Button>
         
-=======
-        <AiFillMinusCircle color="#B10202" fontSize={'18px'}/>
->>>>>>> 435a84cc7608676adf795817a0a0a52ae61e0a36
       </Box>
 
       {open && <Box pb={"25px"} display={"flex"} alignItems={"center"}>
