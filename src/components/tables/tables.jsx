@@ -1,7 +1,7 @@
 import { Box, Center, Flex, Text } from "@chakra-ui/layout";
-import React, { useState } from "react";
+import React from "react";
 import { MdOutlineMoreVert } from "react-icons/md";
-import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
+import { AiFillPlusCircle } from "react-icons/ai";
 import {
   Table,
   Thead,
@@ -10,47 +10,24 @@ import {
   Th,
   Td,
   TableContainer,
-  Button,
-  Input,
 } from "@chakra-ui/react";
 
 const Tables = ({ title }) => {
-  const [open, setopen] = useState(false);
-  const handleClick = () => setopen(!open)
   return (
     <Box>
       <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"35px"}>
         <Text>{title}</Text>
-        <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle /> : <AiFillPlusCircle />}</Button>
+        <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle color="#B10202" /> : <AiFillPlusCircle color="#4CAF50" />}</Button>
       </Box>
-      {open && <Box pb={'20px'} display={"flex"} alignItems={"center"} gap={'25px'}>
-        <Input
-          width={"20%"}
-          placeholder="Ventilyator"
-          h={"2.4rem"}
-          size="md"
-          borderRightRadius={"none"}
-        />
-        <Button
-          bg={"#4CAF50"}
-          color={"#fff"}
-          size="md"
-          borderRadius={"4px"}
-          _hover={"none"}
-          _active={"none"}
-        >
-          Qo’shish
-        </Button>
-      </Box>}
 
       <TableContainer shadow={"0px 2px 8px 0px rgba(0, 0, 0, 0.12)"}>
         <Table width={"100%"} rounded={"16px"} fontSize={'19px'}>
           <Thead>
             <Tr bg="#F1F3F9" >
-              <Th fontSize={'17px'}>№</Th>
-              <Th fontSize={'17px'}> Nomi</Th>
-              <Th fontSize={'17px'}>Qo’shilgan sana</Th>
-              <Th fontSize={'17px'}>User</Th>
+              <Th fontWeight={'bold'} color={'#1D2433'} textTransform={'capitalize'} fontSize={'17px'}>№</Th>
+              <Th fontWeight={'bold'} color={'#1D2433'} textTransform={'capitalize'} fontSize={'17px'}> Nomi</Th>
+              <Th fontWeight={'bold'} color={'#1D2433'} textTransform={'capitalize'} fontSize={'17px'}>Qo’shilgan sana</Th>
+              <Th fontWeight={'bold'} color={'#1D2433'} textTransform={'capitalize'} fontSize={'17px'}>User</Th>
               <Th></Th>
             </Tr>
           </Thead>

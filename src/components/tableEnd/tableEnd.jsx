@@ -12,7 +12,7 @@ import {
   TableContainer,
 } from "@chakra-ui/react";
 function TableEnd({ title }) {
-  const [open, setopen] = useState(false);
+  const [open, setopen] = useState(true);
   const handleClick = () => setopen(!open)
   return (
     <Box>
@@ -26,9 +26,9 @@ function TableEnd({ title }) {
         <Text color={"#404E67"} fontSize={"20px"} fontWeight={"500"}>
           {title}{" "}
         </Text>
-        <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle /> : <AiFillPlusCircle />}</Button>
+        <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle color="#B10202" /> : <AiFillPlusCircle color="#4CAF50" />}</Button>
       </Box>
-      {open && <Box pb={'20px'} display={"flex"} alignItems={"center"} gap={'25px'}>
+      <Box pb={'20px'} display={"flex"} alignItems={"center"} gap={'75px'}>
         <Input
           width={"20%"}
           placeholder="Ventilyator"
@@ -46,52 +46,15 @@ function TableEnd({ title }) {
         >
           Qo’shish
         </Button>
-      </Box>}
+      </Box>
       <TableContainer shadow={"0px 2px 8px 0px rgba(0, 0, 0, 0.12)"}>
         <Table width={"100%"} rounded={"16px"} fontSize={"19px"}>
           <Thead>
             <Tr bg="#F1F3F9">
-              <Th
-                fontSize={"17px"}
-                fontWeight={"bold"}
-                textTransform={"capitalize"}
-                color={"#1D2433"}
-              >
-                №
-              </Th>
-              <Th
-                fontSize={"17px"}
-                fontWeight={"bold"}
-                textTransform={"capitalize"}
-                color={"#1D2433"}
-              >
-                {" "}
-                Nomi
-              </Th>
-              <Th
-                fontSize={"17px"}
-                fontWeight={"bold"}
-                textTransform={"capitalize"}
-                color={"#1D2433"}
-              >
-                Qo’shilgan sana
-              </Th>
-              <Th
-                fontSize={"17px"}
-                fontWeight={"bold"}
-                textTransform={"capitalize"}
-                color={"#1D2433"}
-              >
-                Telefon
-              </Th>
-              <Th
-                fontSize={"17px"}
-                fontWeight={"bold"}
-                textTransform={"capitalize"}
-                color={"#1D2433"}
-              >
-                User
-              </Th>
+              <Th fontSize={"17px"}>№</Th>
+              <Th fontSize={"17px"}> Nomi</Th>
+              <Th fontSize={"17px"}>Qo’shilgan sana</Th>
+              <Th fontSize={"17px"}>User</Th>
               <Th></Th>
             </Tr>
           </Thead>
@@ -100,13 +63,8 @@ function TableEnd({ title }) {
               <Td>1</Td>
               <Td>Mobile maxsulotlar</Td>
               <Td>22 Noy 2023</Td>
-              <Td>+998 (90) 123-45-67</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td
-                display={"flex"}
-                alignItems={"flex-end"}
-                justifyContent={"flex-end"}
-              >
+              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
                 <MdOutlineMoreVert size={"29px"} />
               </Td>
             </Tr>
@@ -114,13 +72,8 @@ function TableEnd({ title }) {
               <Td>2</Td>
               <Td>Mobile maxsulotlar</Td>
               <Td>22 Noy 2023</Td>
-              <Td>+998 (90) 123-45-67</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td
-                display={"flex"}
-                alignItems={"flex-end"}
-                justifyContent={"flex-end"}
-              >
+              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
                 <MdOutlineMoreVert size={"29px"} />
               </Td>
             </Tr>
@@ -128,13 +81,8 @@ function TableEnd({ title }) {
               <Td>3</Td>
               <Td>Mobile maxsulotlar</Td>
               <Td>22 Noy 2023</Td>
-              <Td>+998 (90) 123-45-67</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td
-                display={"flex"}
-                alignItems={"flex-end"}
-                justifyContent={"flex-end"}
-              >
+              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
                 <MdOutlineMoreVert size={"29px"} />
               </Td>
             </Tr>
@@ -142,13 +90,8 @@ function TableEnd({ title }) {
               <Td>4</Td>
               <Td>Mobile maxsulotlar</Td>
               <Td>22 Noy 2023</Td>
-              <Td>+998 (90) 123-45-67</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td
-                display={"flex"}
-                alignItems={"flex-end"}
-                justifyContent={"flex-end"}
-              >
+              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
                 <MdOutlineMoreVert size={"29px"} />
               </Td>
             </Tr>

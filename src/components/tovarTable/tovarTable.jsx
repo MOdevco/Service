@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 
 function TovarTable({ title }) {
-  const [open, setopen] = useState(false);
+  const [open, setopen] = useState(true);
   const handleClick = () => setopen(!open)
   return (
     <Box>
