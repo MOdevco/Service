@@ -13,20 +13,24 @@ import {
   Button,
   Input,
 } from "@chakra-ui/react";
+import axios from "axios";
+import { API } from "../../api";
 
-const Tables = ({ title }) => {
+const Tables = ({ title, name, date }) => {
   const [open, setopen] = useState(false);
+  const [data, setData] = useState([]);
+  
+  
   const handleClick = () => setopen(!open)
+  
 
 
-  useEffect(() => {
-    
-  }, [])
+
   return (
     <Box>
-      <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"35px"}>
-        <Text>{title}</Text>
-        <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle color="#B10202" /> : <AiFillPlusCircle color="#4CAF50" />}</Button>
+      <Box display={"Flex"} alignItems={"center"} gap="10px"pb={'10px'} mt={"35px"}>
+        <Text fontSize={'20px'}>{title}</Text>
+        <Text bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle color="#B10202" /> : <AiFillPlusCircle color="#4CAF50" />}</Text>
       </Box>
       {open && <Box pb={"25px"} display={"flex"} alignItems={"center"}>
         <Input
@@ -82,15 +86,16 @@ const Tables = ({ title }) => {
             </Tr>
           </Thead>
           <Tbody>
-            <Tr >
-              <Td>1</Td>
-              <Td w={'50%'}>Mobile maxsulotlaraaa</Td>
-              <Td>22 Noy 2023</Td>
-              <Td>Komiljon Soliyev Xaydarovich</Td>
-              <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
-                <MdOutlineMoreVert  size={"29px"} />
-              </Td>
-            </Tr>
+                <Tr>
+                  <Td>1</Td>
+                  <Td w={'50%'}>{name}</Td>
+                  <Td>{date}</Td>
+                  <Td>Komiljon Soliyev Xaydarovich</Td>
+                  <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
+                    <MdOutlineMoreVert  size={"29px"} />
+                  </Td>
+                </Tr>
+             
             <Tr bg={'#F8F9FC'}>
               <Td>2</Td>
               <Td>Mobile maxsulotlar</Td>
