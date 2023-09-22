@@ -1,6 +1,6 @@
 import { Box, Button, Input, Text } from "@chakra-ui/react";
-import React from "react";
-import { AiFillPlusCircle } from "react-icons/ai";
+import React, { useState } from "react";
+import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import { MdOutlineMoreVert } from "react-icons/md";
 import {
   Table,
@@ -13,6 +13,8 @@ import {
 } from "@chakra-ui/react";
 
 function TovarTable({ title }) {
+  const [open, setopen] = useState(false);
+  const handleClick = () => setopen(!open)
   return (
     <Box>
       <Box
@@ -25,10 +27,11 @@ function TovarTable({ title }) {
         <Text color={"#404E67"} fontSize={"20px"} fontWeight={"500"}>
           {title}{" "}
         </Text>
-        <AiFillPlusCircle />
+        <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle /> : <AiFillPlusCircle />}</Button>
+        
       </Box>
 
-      <Box pb={"25px"} display={"flex"} alignItems={"center"}>
+      {open && <Box pb={"25px"} display={"flex"} alignItems={"center"}>
         <Input
           width={"20%"}
           placeholder="Ventilyator"
@@ -68,7 +71,7 @@ function TovarTable({ title }) {
             Yuklash
           </Button>
         </Box>
-      </Box>
+      </Box>}
 
       <TableContainer shadow={"0px 2px 8px 0px rgba(0, 0, 0, 0.12)"}>
         <Table width={"100%"} rounded={"16px"} fontSize={'19px'}>

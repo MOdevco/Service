@@ -1,6 +1,6 @@
 import { Box, Button, Input, Text } from "@chakra-ui/react";
-import React from "react";
-import { AiFillPlusCircle } from "react-icons/ai";
+import React, { useState } from "react";
+import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import { MdOutlineMoreVert } from "react-icons/md";
 import {
   Table,
@@ -12,6 +12,8 @@ import {
   TableContainer,
 } from "@chakra-ui/react";
 function TableEnd({ title }) {
+  const [open, setopen] = useState(false);
+  const handleClick = () => setopen(!open)
   return (
     <Box>
       <Box
@@ -24,9 +26,9 @@ function TableEnd({ title }) {
         <Text color={"#404E67"} fontSize={"20px"} fontWeight={"500"}>
           {title}{" "}
         </Text>
-        <AiFillPlusCircle />
+        <Button bg={'transparent'} _hover={''} _active={''} onClick={handleClick}>{open ? <AiFillMinusCircle /> : <AiFillPlusCircle />}</Button>
       </Box>
-      <Box pb={'20px'} display={"flex"} alignItems={"center"} gap={'25px'}>
+      {open && <Box pb={'20px'} display={"flex"} alignItems={"center"} gap={'25px'}>
         <Input
           width={"20%"}
           placeholder="Ventilyator"
@@ -44,7 +46,7 @@ function TableEnd({ title }) {
         >
           Qo’shish
         </Button>
-      </Box>
+      </Box>}
       <TableContainer shadow={"0px 2px 8px 0px rgba(0, 0, 0, 0.12)"}>
         <Table width={"100%"} rounded={"16px"} fontSize={"19px"}>
           <Thead>
