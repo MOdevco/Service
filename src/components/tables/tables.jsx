@@ -36,7 +36,7 @@ const Tables = ({ title, name, date }) => {
         <Input
           width={"20%"}
           placeholder="Ventilyator"
-          h={"2.4rem"}
+          h={"2.5rem"}
           size="md"
           borderRightRadius={"none"}
         />
@@ -116,8 +116,8 @@ const Tables = ({ title, name, date }) => {
             </Tr>
             <Tr bg={'#F8F9FC'}>
               <Td>3</Td>
-              <Td>Mobile maxsulotlar</Td>
-              <Td>22 Noy 2023</Td>
+              <Td>{name}</Td>
+              <Td>{date}</Td>
               <Td>Komiljon Soliyev Xaydarovich</Td>
               <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
                 <MdOutlineMoreVert size={"29px"} />

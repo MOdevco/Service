@@ -38,7 +38,7 @@ const Asosiybody = () => {
       {/* birinvhi table */}
       <Box>
         {data.map((item) => (
-          <Tables name={item.name} date={String(item.date).slice(0 , 4) + ' ' + `${name}` + ' ' + String(item.date).slice(8 , 10) + ' ' + String(item.date).slice(11 , 16)} title={"Tovar sotiladigan qurilmalar"} />
+          <Tables name={item.name} date={String(item.date).slice(8 , 10) + ' ' + `${name}` + ' ' + String(item.date).slice(0 , 4) + ' ' + String(item.date).slice(11 , 16)} title={"Tovar sotiladigan qurilmalar"} />
         ))}
       </Box>
 
