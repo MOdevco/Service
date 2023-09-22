@@ -36,7 +36,7 @@ const Tables = ({ title }) => {
         <Input
           width={"20%"}
           placeholder="Ventilyator"
-          h={"2.4rem"}
+          h={"2.5rem"}
           size="md"
           borderRightRadius={"none"}
         />
