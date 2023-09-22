@@ -15,8 +15,8 @@ import {
 const Tables = ({ title }) => {
   return (
     <Box>
-      <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"35px"}>
-        <Text>{title}</Text>
+      <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"55px"} pb={'20px'}>
+        <Text fontSize={'20px'} color={"#404E67"} fontWeight={'500'}>{title}</Text>
         <AiFillPlusCircle />
       </Box>
 

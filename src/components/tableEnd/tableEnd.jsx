@@ -26,7 +26,7 @@ function TableEnd({ title }) {
         </Text>
         <AiFillPlusCircle />
       </Box>
-      <Box pb={'20px'} display={"flex"} alignItems={"center"} gap={'25px'}>
+      <Box pb={'20px'} display={"flex"} alignItems={"center"} gap={'75px'}>
         <Input
           width={"20%"}
           placeholder="Ventilyator"
