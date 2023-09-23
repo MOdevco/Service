@@ -4,17 +4,19 @@ import { Route, Routes } from "react-router-dom";
 import AsosiyMalumatlar from "./pages/AsosiyMalumotlar";
 import Asosiybody from "./components/asosiybody/asosiybody";
 import Navbar from "./components/navbar/navbar";
+import Login from "./pages/Login";
 
 function App() {
   return (
-    <Box width={"100%"}>
+    <Box width={"100%"} bg={'#F6F7FB'} h={'100vh'}>
       <Box>
         <Navbar />
       </Box>
-      <Box maxWidth={"1832px"} m={"auto"}>
+      <Box maxWidth={"1832px"} m={"auto"} >
         <Routes>
           <Route path="/" element={<AsosiyMalumatlar />}></Route>
           <Route path="/asosiy" element={<Asosiybody />}></Route>
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
       </Box>
     </Box>
