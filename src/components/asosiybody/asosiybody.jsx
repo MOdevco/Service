@@ -1,31 +1,28 @@
-import { Box, Center, Flex, Text } from "@chakra-ui/layout";
-import React, { useState } from "react";
-import { MdOutlineMoreVert } from "react-icons/md";
-import { AiFillPlusCircle } from "react-icons/ai";
+import React from "react";
 
-import Tables from "../tables/tables";
-import TovarTable from "../tovarTable/tovarTable";
-import TableEnd from "../tableEnd/tableEnd";
+
+import TableSotuv from "../tableSotuv/tableSotuv";
+import TavarCatigoryTab from "../tavarCatigoryTab/tavarCatigoryTab";
+import TavarCatigory from "../tavarCatigory/tavarCatigory";
+import TavarCatigoryEnd from "../tavarCatigoryEnd/tavarCatigoryEnd";
+import { Box } from "@chakra-ui/react";
 
 const Asosiybody = () => {
 
+
+  
   return (
-    <Box>
+    <Box p={'50px'}>
       {/* birinvhi table */}
-      <Box>
-        <Tables title={"Tovar sotiladigan qurilmalar"} />
-      </Box>
+     <TableSotuv />
 
-      <Box>
-        <Tables title={"Tovar kategoriyalari"} />
-      </Box>
 
-      <Box>
-        <TovarTable title={"Tovar kategoriyalari"}/>
-      </Box>
-      <Box>
-        <TableEnd title={"Tovar kategoriyalari"}/>
-      </Box>
+    <TavarCatigoryTab />
+    
+
+    <TavarCatigory />
+
+     {/* <TavarCatigoryEnd /> */}
     </Box>
   );
 }
