@@ -38,12 +38,13 @@ const Tables = ({ title, name, date }) => {
           placeholder="Ventilyator"
           h={"2.5rem"}
           size="md"
-          borderRightRadius={"none"}
+          borderRightRadius={"0"}
         />
         <Button
           bg={"#4CAF50"}
           color={"#fff"}
           size="md"
+          borderRightRadius={'0'}
           borderRadius={"3px"}
           _hover={"none"}
           _active={"none"}

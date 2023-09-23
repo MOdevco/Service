@@ -26,8 +26,8 @@ const Asosiybody = () => {
         console.log(res.data);
       });
   }, []);
-  const monthNames = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
+  const monthNames = ["Yanvar", "Fevral", "Mart", "Aprel", "May", "Iyun",
+  "Iyul", "Avgust", "Sentyabr", "Oktyabr", "Noyabr", "Dekabr"
   ];
 
   const d = new Date();
