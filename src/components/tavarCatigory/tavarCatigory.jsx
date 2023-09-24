@@ -56,7 +56,6 @@ function TavarCatigory() {
       <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"35px"}>
         <Text fontSize={'20px'} fontWeight={'500'}>Tovar turlari</Text>
         <Button
-        pb={'10px'}
           bg={"transparent"}
           _hover={""}
           _active={""}
