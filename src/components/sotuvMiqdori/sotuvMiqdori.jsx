@@ -53,69 +53,69 @@ const SotuvMiqdori = () => {
     //   }, []);
   return (
     <Box>
-    <Box>
-      <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"35px"}>
-        <Text fontSize={'20px'} fontWeight={'500'}>Sotuv miqdor turlari</Text>
-        <Button
-       
-          bg={"transparent"}
-          _hover={""}
-          _active={""}
-          onClick={handleClick}
-        >
-          {open ? (
-            <AiFillMinusCircle color="#B10202" />
-          ) : (
-            <AiFillPlusCircle color="#4CAF50" />
-          )}
-        </Button>
-      </Box>
-    {open && (
-      <Box pb={"25px"} display={"flex"} alignItems={"center"}>
-        <Input
-          width={"20%"}
-          placeholder="Ventilyator"
-          h={"2.4rem"}
-          size="md"
-          borderRightRadius={"none"}
-        />
-        <Button
-          bg={"#4CAF50"}
-          color={"#fff"}
-          size="md"
-          borderRadius={"3px"}
-          _hover={"none"}
-          _active={"none"}
-        >
-          Qo’shish
-        </Button>
-        <Box pl={"15px"} display={"flex"} alignItems={"center"} gap={"15px"}>
-          <Button
-            _hover={"none"}
-            color={"#fff"}
-            padding={"11px 31px"}
-            _active={"none"}
-            bg={"#404E67"}
-            borderRadius={"3px"}
-          >
-            Excel
-          </Button>
-          <Button
-            _hover={"none"}
-            color={"#fff"}
-            padding={"11px 31px"}
-            _active={"none"}
-            bg={"#3A69BB"}
-            borderRadius={"3px"}
-          >
-            Yuklash
-          </Button>
+        <Box>
+        <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"35px"}>
+            <Text fontSize={'20px'} fontWeight={'500'}>Sotuv miqdor turlari</Text>
+            <Button
+        
+            bg={"transparent"}
+            _hover={""}
+            _active={""}
+            onClick={handleClick}
+            >
+            {open ? (
+                <AiFillMinusCircle color="#B10202" />
+            ) : (
+                <AiFillPlusCircle color="#4CAF50" />
+            )}
+            </Button>
         </Box>
-      </Box>
-    )}
+        {open && (
+        <Box pb={"25px"} display={"flex"} alignItems={"center"}>
+            <Input
+            width={"20%"}
+            placeholder="Ventilyator"
+            h={"2.4rem"}
+            size="md"
+            borderRightRadius={"none"}
+            />
+            <Button
+            bg={"#4CAF50"}
+            color={"#fff"}
+            size="md"
+            borderRadius={"3px"}
+            _hover={"none"}
+            _active={"none"}
+            >
+            Qo’shish
+            </Button>
+            <Box pl={"15px"} display={"flex"} alignItems={"center"} gap={"15px"}>
+            <Button
+                _hover={"none"}
+                color={"#fff"}
+                padding={"11px 31px"}
+                _active={"none"}
+                bg={"#404E67"}
+                borderRadius={"3px"}
+            >
+                Excel
+            </Button>
+            <Button
+                _hover={"none"}
+                color={"#fff"}
+                padding={"11px 31px"}
+                _active={"none"}
+                bg={"#3A69BB"}
+                borderRadius={"3px"}
+            >
+                Yuklash
+            </Button>
+            </Box>
+        </Box>
+        )}
 
-   
-    </Box>
+    
+        </Box>
      <TableContainer shadow={"0px 2px 8px 0px rgba(0, 0, 0, 0.12)"} mt={'15px'}>
         <Table width={"100%"} rounded={"16px"} fontSize={'19px'}>
         <Thead>

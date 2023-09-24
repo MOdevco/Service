@@ -16,27 +16,40 @@ import { MdOutlineMoreVert } from "react-icons/md";
 // import TavartableStart from '../tavartableStart/tavartableStart';
 import axios from 'axios';
 import { API } from '../../api';
-import { AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
+import { AiFillDelete, AiFillMinusCircle, AiFillPlusCircle, AiOutlineCheckCircle } from 'react-icons/ai';
+import { useToast } from '@chakra-ui/react'
+
 function TavarCatigory() {
-    const monthNames = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-      ];
-      const d = new Date();
-      let name = monthNames[d.getMonth()];
-      const [open, setopen] = useState(false);
-      const handleClick = () => setopen(!open);
-    const [data,setData] =useState([])
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const d = new Date();
+  let name = monthNames[d.getMonth()];
+  const [open, setopen] = useState(false);
+  const handleClick = () => setopen(!open);
+  const [data, setData] = useState([]);
+  const [valueData , setVAlueData] = useState('')
+  const [validateDate , setValiDate] = useState(false)
+  const toast = useToast()
+  const [files , setFiles] = useState({file: ''})
+  const [fileName , setFileName] = useState("Yuklash")
+  const [loading , setLoading] = useState(true)
+  const [saveData , setSaveData] = useState(false)
+
+  const handleFile = (e) => {
+    setFiles({...files, file: e.target.files[0]})
+  }
     useEffect(() => {
         axios
           .get(`${API}api/category-types`, {
@@ -50,6 +63,110 @@ function TavarCatigory() {
             setData(res.data);
           });
       }, []);
+
+
+      const handleSubmit = () => {
+        axios
+        .post(`${API}api/category-types/new`,  {
+          "name": valueData
+        }, {
+          headers: {
+            // "ngrok-skip-browser-warning": true,
+            // "Access-Control-Allow-Origin": "*",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        })
+        .then((res) => {
+          setVAlueData('')
+          
+          if(res.status === 200) {
+            toast({
+              description: `${res.data.message}`,
+              status: 'success',
+              position: 'top-right',
+              duration: 2000,
+              isClosable: true,
+            })
+              axios
+              .get(`${API}api/category-types`, {
+                headers: {
+                  // "ngrok-skip-browser-warning": true,
+                  // "Access-Control-Allow-Origin": "*",
+                  Authorization: `Bearer ${localStorage.getItem("token")}`,
+                },
+              })
+              .then((res) => {
+                setData(res.data);
+              });
+    
+          }
+    
+        }).catch((err) => {
+          toast({
+            description: `${err.response.data.message}`,
+            status: 'error',
+            position: 'top-right',
+            duration: 2000,
+            isClosable: true,
+          })
+        });
+      }
+    
+      const handleSubmitDoc = () => {
+        const formData=  new FormData()
+        formData.append("file" , files.file)
+        setLoading(false)
+        if(!files.file) {
+          setLoading(true)
+        }
+        axios
+        .post(`${API}api/category-types/upload`, formData, {
+          headers: {
+            // "ngrok-skip-browser-warning": true,
+            // "Access-Control-Allow-Origin": "*",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        })
+        .then((res) => {
+          setLoading(true)
+          setFileName("Yuklandi")
+          setSaveData(true)
+          setTimeout(() => {
+            setFileName("Yuklash")
+            setSaveData(false)
+          } , 2000)
+          if(res.status === 200) {
+            toast({
+              description: `${res.data.message}`,
+              status: 'success',
+              position: 'top-right',
+              duration: 2000,
+              isClosable: true,
+            })
+              axios
+              .get(`${API}api/category-types`, {
+                headers: {
+                  // "ngrok-skip-browser-warning": true,
+                  // "Access-Control-Allow-Origin": "*",
+                  Authorization: `Bearer ${localStorage.getItem("token")}`,
+                },
+              })
+              .then((res) => {
+                setData(res.data);
+              });
+    
+          }
+    
+        }).catch((err) => {
+          toast({
+            description: `File Tanlanmadi`,
+            status: 'error',
+            position: 'top-right',
+            duration: 2000,
+            isClosable: true,
+          })
+        });
+      }
   return (
     <Box>
       <Box>
@@ -69,47 +186,117 @@ function TavarCatigory() {
         </Button>
       </Box>
       {open && (
-        <Box pb={"25px"} display={"flex"} alignItems={"center"}>
-          <Input
-            width={"20%"}
+      <Box>
+      <Box pb={"25px"} display={"flex"} alignItems={"center"}>
+        <Box display={'flex'} border={'1px'} rounded={'3px'} alignItems={'center'} borderColor={'#B5BDC5'} >
+          <input className={validateDate ? "success" : 'sucPre'}
+            onChange={function(e) {
+              if(e.target.value.match("[0-9*]")){
+                e.target.value = ""
+              } else {
+                setVAlueData(e.target.value)
+              }
+             
+            }}
+            // width={"20%"}
             placeholder="Ventilyator"
-            h={"2.4rem"}
+            // h={"2.7rem"}
             size="md"
-            borderRightRadius={"none"}
+            value={valueData}
           />
+
+          
           <Button
+            onClick={function() {
+              
+              if(!valueData == '') {
+                handleSubmit()
+                if(!valueData === '') {
+                  setValiDate(false)
+                }
+              } else {
+                setValiDate(true)
+              }
+            }}
             bg={"#4CAF50"}
             color={"#fff"}
-            size="md"
             borderRadius={"3px"}
+            rounded={'3px'}
             _hover={"none"}
             _active={"none"}
           >
             Qo’shish
           </Button>
+          
+        </Box>
+        
           <Box pl={"15px"} display={"flex"} alignItems={"center"} gap={"15px"}>
-            <Button
+                <form action="" >
+                  <input  className='input-field' hidden type="file" accept=".xlsx,.xls"  onChange={handleFile} />
+                  
+                
+              </form>
+              {!files.file.name ? (
+                <Button
+                  onClick={() => document.querySelector('.input-field').click()}
+                  _hover={"none"}
+                  color={"#fff"}
+                  padding={"11px 31px"}
+                  _active={"none"}
+                  bg={"#404E67"}
+                  borderRadius={"3px"}
+                >
+                  Exel
+                </Button>
+
+              ): (
+                <Button
+                  _hover={"none"}
+                  color={"#fff"}
+                  padding={"11px 31px"}
+                  _active={"none"}
+                  bg={"#404E67"}
+                  borderRadius={"3px"}
+                >
+                  <Text display={'flex'} alignItems={'center'} gap={'10px'}>
+                    {files.file.name}
+                    <AiFillDelete onClick={() => {
+                       setFiles({...files , file: ''})
+                    }} fontSize={'22px'} />
+                  </Text>
+                </Button>
+              )}
+            
+            
+           
+            
+            {loading && <Button
+              onClick={handleSubmitDoc}
               _hover={"none"}
               color={"#fff"}
               padding={"11px 31px"}
               _active={"none"}
-              bg={"#404E67"}
+              bg={saveData ? "green" : "#3A69BB"}
               borderRadius={"3px"}
             >
-              Excel
-            </Button>
-            <Button
-              _hover={"none"}
+              {fileName}
+              {saveData &&< AiOutlineCheckCircle color="white" fontSize={'25px'} /> }
+            </Button>}
+
+           {!loading && <Button
+              isLoading
+              loadingText='Yuklanmoqda...'
+              spinnerPlacement='end'
               color={"#fff"}
-              padding={"11px 31px"}
-              _active={"none"}
               bg={"#3A69BB"}
               borderRadius={"3px"}
+              _hover={{bg: ''}}
             >
-              Yuklash
-            </Button>
+              Continue
+            </Button>}
           </Box>
-        </Box>
+      </Box>
+    </Box>
       )}
 
      

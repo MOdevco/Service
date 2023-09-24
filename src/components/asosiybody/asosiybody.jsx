@@ -7,6 +7,7 @@ import TavarCatigoryEnd from "../tavarCatigoryEnd/tavarCatigoryEnd";
 import { Box } from "@chakra-ui/react";
 import SotuvMiqdori from "../sotuvMiqdori/sotuvMiqdori";
 import TovarFirmalar from "../tovarFirmalar/tovarFirmalar";
+import Lavozimlar from "../lavozimlar/lavozimlar";
 
 const Asosiybody = () => {
 
@@ -15,7 +16,7 @@ const Asosiybody = () => {
   return (
     <Box p={'50px'} width={'100%'}>
       {/* birinvhi table */}
-      <Tabs position="relative" variant=''>
+      <Tabs  variant=''>
         <TabList >
           <Tab
             fontSize={"20px"}
@@ -125,6 +126,8 @@ const Asosiybody = () => {
       <SotuvMiqdori />
 
       <TovarFirmalar />
+
+      <Lavozimlar />
     </Box>
   );
 }
