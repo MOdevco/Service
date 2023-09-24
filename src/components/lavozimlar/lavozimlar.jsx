@@ -1,9 +1,9 @@
 import React from 'react'
 
-const lavozimlar = () => {
+const Lavozimlar = () => {
   return (
-    <div>lavozimlar</div>
+    <div>Lavozimlar</div>
   )
 }
 
-export default lavozimlar
+export default Lavozimlar
