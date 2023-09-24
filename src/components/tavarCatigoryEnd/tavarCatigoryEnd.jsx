@@ -10,11 +10,13 @@ import {
     Button,
     Input,
     Box,
+    Text,
   } from "@chakra-ui/react";
   import { MdOutlineMoreVert } from "react-icons/md";
 // import TavartableStart from '../tavartableStart/tavartableStart';
 import axios from 'axios';
 import { API } from '../../api';
+import { AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
 function TavarCatigoryEnd() {
     const monthNames = [
       "January",

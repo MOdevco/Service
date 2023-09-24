@@ -56,9 +56,9 @@ function TavarCatigoryTab() {
     <Box>
       <Box>
         <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"35px"}>
-          <Text fontSize={'20px'} fontWeight={'500'}>Tovar sotiladigan qurilmalar</Text>
+          <Text fontSize={'20px'} pb={'15px'} fontWeight={'500'}>Tovar sotiladigan qurilmalar</Text>
           <Button
-         
+            pb={'10px'}
             bg={"transparent"}
             _hover={""}
             _active={""}
@@ -128,10 +128,10 @@ function TavarCatigoryTab() {
             <Th></Th>
           </Tr>
         </Thead>
-        <Tbody>
+        <Tbody bg={'white'}>
           {data1.map((item, i) => (
-             <Tr key={i}>
-                <Td>{item.id}</Td>
+             <Tr  key={i} bg={i%2 == 1 ? '#F8F9FC' : ''}>
+                <Td>{i + 1}</Td>
                 <Td w={'50%'}>{item.name}</Td>
                 <Td>{String(item.date).slice(0 , 4) + ' ' + `${name}` + ' ' + String(item.date).slice(8 , 10) + ' ' + String(item.date).slice(11 , 16)}</Td>
                 <Td>Komiljon Soliyev Xaydarovich</Td>
