@@ -10,49 +10,51 @@ import {
     Button,
     Input,
     Box,
+    Text,
   } from "@chakra-ui/react";
+  import { Checkbox, CheckboxGroup } from '@chakra-ui/react'
   import { MdOutlineMoreVert } from "react-icons/md";
 // import TavartableStart from '../tavartableStart/tavartableStart';
 import axios from 'axios';
 import { API } from '../../api';
+// import { AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
 function TavarCatigoryEnd() {
-    const monthNames = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    const d = new Date();
-    let name = monthNames[d.getMonth()];
-    const [data,setData] = useState([])
-    const [open, setopen] = useState(false);
-    const handleClick = () => setopen(!open);
-    useEffect(() => {
-        axios
-          .get(`${API}api/category-types`, {
-            headers: {
-              // "ngrok-skip-browser-warning": true,
-              // "Access-Control-Allow-Origin": "*",
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-          })
-          .then((res) => {
-            setData(res.data);
-          });
-      }, []);
+    // const monthNames = [
+    //   "January",
+    //   "February",
+    //   "March",
+    //   "April",
+    //   "May",
+    //   "June",
+    //   "July",
+    //   "August",
+    //   "September",
+    //   "October",
+    //   "November",
+    //   "December",
+    // ];
+    // const d = new Date();
+    // let name = monthNames[d.getMonth()];
+    // const [data,setData] = useState([])
+    // const [open, setopen] = useState(false);
+    // const handleClick = () => setopen(!open);
+    // useEffect(() => {
+    //     axios
+    //       .get(`${API}api/category-types`, {
+    //         headers: {
+    //           // "ngrok-skip-browser-warning": true,
+    //           // "Access-Control-Allow-Origin": "*",
+    //           Authorization: `Bearer ${localStorage.getItem("token")}`,
+    //         },
+    //       })
+    //       .then((res) => {
+    //         setData(res.data);
+    //       });
+    //   }, []);
   return (
     <Box>
-      <Box>
+      {/* <Box>
       <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"35px"}>
-        <Text>Tovar sotiladigan qurilmalar</Text>
         <Button
           bg={"transparent"}
           _hover={""}
@@ -111,7 +113,7 @@ function TavarCatigoryEnd() {
       )}
 
      
-      </Box>
+      </Box> */}
         <TableContainer shadow={"0px 2px 8px 0px rgba(0, 0, 0, 0.12)"}>
           <Table width={"100%"} rounded={"16px"} fontSize={'19px'}>
             <Thead>
@@ -124,19 +126,42 @@ function TavarCatigoryEnd() {
               </Tr>
             </Thead>
             <Tbody>
-                {data.map((item,i) =>(
-                     <Tr>
-                     <Td>1</Td>
-                     <Td w={'50%'}>{item.name}</Td>
-                     <Td>{String(item.date).slice(0 , 4) + ' ' + `${name}` + ' ' + String(item.date).slice(8 , 10) + ' ' + String(item.date).slice(11 , 16)}</Td>
-                     <Td>Komiljon Soliyev Xaydarovich</Td>
-                     <Td display={'flex'} alignItems={'flex-end'} justifyContent={'flex-end'}>
-                       <MdOutlineMoreVert  size={"29px"} />
-                     </Td>
-                </Tr>
-                ))}
-                
-              
+                <Tr>
+                  <Td><Checkbox ></Checkbox></Td>
+                  <Td  w={'50%'}>Aux</Td>
+                  <Td>20 Okt 2023</Td>
+                  <Td>Komiljon Soliyev Xaydarovich</Td>
+                </Tr>    
+                <Tr>
+                  <Td><Checkbox ></Checkbox></Td>
+                  <Td>TypeC - USB</Td>
+                  <Td>20 Okt 2023</Td>
+                  <Td>Komiljon Soliyev Xaydarovich</Td>
+                </Tr>    
+                <Tr>
+                  <Td><Checkbox ></Checkbox></Td>
+                  <Td>Aux - Type C</Td>
+                  <Td>20 Okt 2023</Td>
+                  <Td>Komiljon Soliyev Xaydarovich</Td>
+                </Tr>    
+                <Tr>
+                  <Td><Checkbox ></Checkbox></Td>
+                  <Td>HDMI - HDMI</Td>
+                  <Td>20 Okt 2023</Td>
+                  <Td>Komiljon Soliyev Xaydarovich</Td>
+                </Tr>   
+                <Tr>
+                  <Td><Checkbox ></Checkbox></Td>
+                  <Td>HDMI - Type - C</Td>
+                  <Td>20 Okt 2023</Td>
+                  <Td>Komiljon Soliyev Xaydarovich</Td>
+                </Tr> 
+                <Tr>
+                  <Td><Checkbox ></Checkbox></Td>
+                  <Td>Micro</Td>
+                  <Td>20 Okt 2023</Td>
+                  <Td>Komiljon Soliyev Xaydarovich</Td>
+                </Tr>               
             </Tbody>
           </Table>
         </TableContainer>
