@@ -17,7 +17,7 @@ import {
 // import TavartableStart from '../tavartableStart/tavartableStart';
 import axios from 'axios';
 import { API } from '../../api';
-// import { AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
+import { AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
 function TavarCatigoryEnd() {
     // const monthNames = [
     //   "January",
