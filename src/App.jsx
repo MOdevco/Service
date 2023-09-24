@@ -8,7 +8,7 @@ import Login from "./pages/Login";
 
 function App() {
   return (
-    <Box width={"100%"} bg={'#F6F7FB'} h={'100vh'}>
+    <Box width={"100%"}  >
       <Box>
         <Navbar />
       </Box>
