@@ -172,7 +172,7 @@ function  TableSotuv() {
     <Box height={'50vh'}>
       <Box>
         <Box>
-          <Box display={"Flex"} mb={'10px'} alignItems={"center"} justifyContent={'space-between'} gap="10px" mt={"35px"}>
+          <Box display={"Flex"} mb={'10px'} alignItems={"center"} justifyContent={'space-between'} gap="10px" mt={"20px"}>
             <Box display={'flex'} alignItems={'center'}>
               <Text fontSize={'20px'} fontWeight={'500'}>Tovar sotiladigan qurilmalar</Text>
               <Button
