@@ -1,3 +1,35 @@
 *::-webkit-scrollbar{
     display: none;
+} 
+
+body {
+    background: #F6F7FB ! important;
+}
+
+.success {
+    background-color: transparent;
+    outline: none;
+    padding-left: 20px;
+    border: 1px solid red;
+    height: 40px;
+    box-shadow: 0px 0px 4px red;
+}
+
+.sucPre {
+    background-color: transparent;
+    outline: none;
+    padding-left: 20px;
+}
+
+.validateDateSuccess {
+    border-color: #B5BDC5 !important;
+}
+
+
+table tr { 
+    font-size: 14px;
+}
+
+p {
+    color: #404E67;
 }
