@@ -13,7 +13,7 @@ const Asosiybody = () => {
 
   
   return (
-    <Box p={'50px'} width={'100%'}>
+    <Box pt={'10px'} width={'100%'}>
       {/* birinvhi table */}
       <Tabs position="relative" variant=''>
         <TabList >
