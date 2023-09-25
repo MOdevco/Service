@@ -14,7 +14,7 @@ const Asosiybody = () => {
 
   
   return (
-    <Box p={'50px'} width={'100%'}>
+    <Box p={'50px'} pt={'70px'} width={'100%'}>
       {/* birinvhi table */}
       <Tabs  variant='red'>
         <TabList >
@@ -88,7 +88,7 @@ const Asosiybody = () => {
           <TabPanel maxWidth={"1832px"} m={"auto"}> <TavarCatigory /> </TabPanel>
           <TabPanel maxWidth={"1832px"} m={"auto"}> <TavarCatigoryTab /></TabPanel>
           <TabPanel maxWidth={"1832px"} m={"auto"}> 
-            <Box pt={'50px'} pb={'40px'}>
+            <Box >
               <Tabs colorScheme='blue'>
                 <TabList>
                   <Tab>Kabel</Tab>

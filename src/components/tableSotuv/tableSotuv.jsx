@@ -169,7 +169,7 @@ function  TableSotuv() {
 
 
   return (
-    <Box>
+    <Box height={'50vh'}>
       <Box>
         <Box>
           <Box display={"Flex"} mb={'10px'} alignItems={"center"} justifyContent={'space-between'} gap="10px" mt={"35px"}>
