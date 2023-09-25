@@ -127,37 +127,37 @@ function TavarCatigoryEnd() {
             </Thead>
             <Tbody>
                 <Tr>
-                  <Td><Checkbox ></Checkbox></Td>
+                  <Td w={'0%'}  ><Checkbox size='lg' colorScheme='purple' ></Checkbox></Td>
                   <Td  w={'50%'}>Aux</Td>
                   <Td>20 Okt 2023</Td>
                   <Td>Komiljon Soliyev Xaydarovich</Td>
                 </Tr>    
                 <Tr>
-                  <Td><Checkbox ></Checkbox></Td>
+                  <Td><Checkbox size='lg' colorScheme='purple' ></Checkbox></Td>
                   <Td>TypeC - USB</Td>
                   <Td>20 Okt 2023</Td>
                   <Td>Komiljon Soliyev Xaydarovich</Td>
                 </Tr>    
                 <Tr>
-                  <Td><Checkbox ></Checkbox></Td>
+                  <Td><Checkbox size='lg' colorScheme='purple' ></Checkbox></Td>
                   <Td>Aux - Type C</Td>
                   <Td>20 Okt 2023</Td>
                   <Td>Komiljon Soliyev Xaydarovich</Td>
                 </Tr>    
                 <Tr>
-                  <Td><Checkbox ></Checkbox></Td>
+                  <Td><Checkbox size='lg' colorScheme='purple' ></Checkbox></Td>
                   <Td>HDMI - HDMI</Td>
                   <Td>20 Okt 2023</Td>
                   <Td>Komiljon Soliyev Xaydarovich</Td>
                 </Tr>   
                 <Tr>
-                  <Td><Checkbox ></Checkbox></Td>
+                  <Td><Checkbox size='lg' colorScheme='purple' ></Checkbox></Td>
                   <Td>HDMI - Type - C</Td>
                   <Td>20 Okt 2023</Td>
                   <Td>Komiljon Soliyev Xaydarovich</Td>
                 </Tr> 
                 <Tr>
-                  <Td><Checkbox ></Checkbox></Td>
+                  <Td><Checkbox size='lg' colorScheme='purple' ></Checkbox></Td>
                   <Td>Micro</Td>
                   <Td>20 Okt 2023</Td>
                   <Td>Komiljon Soliyev Xaydarovich</Td>
