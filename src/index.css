@@ -25,3 +25,12 @@ body {
     border-color: #B5BDC5 !important;
 }
 
+
+table tr { 
+    font-size: 14px;
+}
+
+p {
+    color: #404E67;
+}
+

@@ -43,7 +43,6 @@ function  TableSotuv() {
   const [fileName , setFileName] = useState("Yuklash")
   const [loading , setLoading] = useState(true)
   const [saveData , setSaveData] = useState(false)
- console.log(files);
 
   const handleFile = (e) => {
     setFiles({...files, file: e.target.files[0]})
@@ -60,7 +59,7 @@ function  TableSotuv() {
         },
       })
       .then((res) => {
-        setData(res.data);
+        setData(res.data);  
       });
   }, []);
   const handleSubmit = () => {
@@ -245,12 +244,9 @@ function  TableSotuv() {
                 </Box>
                 
                   <Box pl={"15px"} display={"flex"} alignItems={"center"} gap={"15px"}>
-                        <form action="" >
-                          <input  className='input-field' hidden type="file" accept=".xlsx,.xls"  onChange={handleFile} />
-                          
-                        
+                      <form action="" >
+                        <input  className='input-field' hidden type="file" accept=".xlsx,.xls"  onChange={handleFile} />
                       </form>
-                      {!files.file.name ? (
                         <Button
                           onClick={() => document.querySelector('.input-field').click()}
                           _hover={"none"}
@@ -263,26 +259,7 @@ function  TableSotuv() {
                           Exel
                         </Button>
 
-                      ): (
-                        <Button
-                          _hover={"none"}
-                          color={"#fff"}
-                          padding={"11px 31px"}
-                          _active={"none"}
-                          bg={"#404E67"}
-                          borderRadius={"3px"}
-                        >
-                          <Text display={'flex'} alignItems={'center'} gap={'10px'}>
-                            {files.file.name}
-                            <AiFillDelete onClick={() => {
-                               setFiles({...files , file: ''})
-                            }} fontSize={'22px'} />
-                          </Text>
-                        </Button>
-                      )}
                     
-                    
-                   
                     
                     {loading && <Button
                       onClick={handleSubmitDoc}
@@ -310,7 +287,7 @@ function  TableSotuv() {
                     </Button>}
                   </Box>
               </Box>
-        </Box>
+            </Box>
         
       )}
      

@@ -21,7 +21,7 @@ function App() {
         <Navbar />
       </Box>
    
-      <Box maxWidth={"1832px"} m={"auto"}>
+      <Box maxWidth={"1832px"} m={"auto"} pt={'50px'}>
         <Routes>
           <Route path="/" element={<AsosiyMalumatlar />}></Route>
           <Route path="/asosiy" element={<Asosiybody />}></Route>
