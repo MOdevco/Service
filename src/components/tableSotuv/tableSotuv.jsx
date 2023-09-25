@@ -43,7 +43,6 @@ function  TableSotuv() {
   const [fileName , setFileName] = useState("Yuklash")
   const [loading , setLoading] = useState(true)
   const [saveData , setSaveData] = useState(false)
-  console.log(files);
 
   const handleFile = (e) => {
     setFiles({...files, file: e.target.files[0]})
@@ -60,7 +59,7 @@ function  TableSotuv() {
         },
       })
       .then((res) => {
-        setData(res.data);
+        setData(res.data);  
       });
   }, []);
   const handleSubmit = () => {
