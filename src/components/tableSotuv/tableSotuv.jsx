@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, position } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import {
     Table,
@@ -291,11 +291,10 @@ function  TableSotuv() {
         
       )}
      
-     
       </Box>
       <TableContainer shadow={"0px 2px 8px 0px rgba(0, 0, 0, 0.12)"}>
         <Table width={"100%"} rounded={"16px"} fontSize={"19px"}>
-          <Thead >
+          <Thead>
             <Tr bg="#F1F3F9">
               <Th
                 fontWeight={"bold"}
