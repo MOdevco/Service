@@ -298,10 +298,6 @@ const PropsTable = ({apiGet , apiPost , title , apiPostDoc}) => {
                     </Button>}
                   </Box>
               </Box>
-              <Box border={'1px'} mb={'20px'} rounded={'10px'} borderColor={'#CECECE'} p={'10px'} display={'flex'} alignItems={'center'}>
-                <Search2Icon  color={'gray.500'}/>
-                <input onChange={(e) => setSearch(e.target.value)} type="" placeholder="Qidirish..." className="filter" />
-              </Box>
             </Box>
         )}
         <Box bg={'transparent'} position={'sticky'}  top={0} >
