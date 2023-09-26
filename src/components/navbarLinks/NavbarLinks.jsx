@@ -9,6 +9,7 @@ function NavbarLinks() {
         linkName={"Asosiy ma’lumotlar"}
         linkIcon={coin}
         path={"/asosiy"}
+       
       />
       <NavbarLinksProps linkName={"Sotuv"} linkIcon={coins} />
       <NavbarLinksProps linkName={"Maxsulot qabuli"} linkIcon={recive} />
