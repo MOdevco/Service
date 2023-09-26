@@ -80,8 +80,6 @@ const TavartableStart = ({ title }) => {
           </Box>
         </Box>
       )}
-
-     
     </Box>
   );
 };
