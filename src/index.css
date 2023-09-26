@@ -34,3 +34,9 @@ p {
     color: #404E67;
 }
 
+
+.filter {
+    background-color: transparent;
+    outline: none;
+    padding-left: 10px;
+}
