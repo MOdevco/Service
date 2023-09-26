@@ -40,3 +40,7 @@ p {
     outline: none;
     padding-left: 10px;
 }
+
+.active{
+    color: #00C566 !important;
+}
