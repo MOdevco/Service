@@ -1,13 +1,8 @@
 import React from "react";
-import { Tabs, TabList, TabPanels, Tab, TabPanel, TabIndicator } from '@chakra-ui/react'
-import TableSotuv from "../tableSotuv/tableSotuv";
-import TavarCatigoryTab from "../tavarCatigoryTab/tavarCatigoryTab";
-import TavarCatigory from "../tavarCatigory/tavarCatigory";
+import { Tabs, TabList, TabPanels, Tab, TabPanel} from '@chakra-ui/react'
 import TavarCatigoryEnd from "../tavarCatigoryEnd/tavarCatigoryEnd";
 import { Box } from "@chakra-ui/react";
-import SotuvMiqdori from "../sotuvMiqdori/sotuvMiqdori";
 import TovarFirmalar from "../tovarFirmalar/tovarFirmalar";
-import Lavozimlar from "../lavozimlar/lavozimlar";
 import PropsTable from "../propsTAble/propsTable";
 
 const Asosiybody = () => {
