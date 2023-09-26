@@ -18,7 +18,7 @@ import {
 import axios from 'axios';
 import { API } from '../../api';
 import { AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
-function TavarCatigoryEnd() {
+function TavarCatigoryEnd({title}) {
     // const monthNames = [
     //   "January",
     //   "February",
@@ -113,7 +113,11 @@ function TavarCatigoryEnd() {
       )}
 
      
+      
       </Box> */}
+        <Text fontSize={'20px'} color={'#404E67'} fontWeight={'500'} mb={'15px'}>
+            {title}
+        </Text>
         <TableContainer shadow={"0px 2px 8px 0px rgba(0, 0, 0, 0.12)"}>
           <Table width={"100%"} rounded={"16px"} fontSize={'19px'}>
             <Thead>
