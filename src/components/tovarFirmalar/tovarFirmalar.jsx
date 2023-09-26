@@ -115,7 +115,7 @@ const TovarFirmalar = () => {
         <Box>
             <Box>
                 <Box>
-                    <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"35px"}>
+                    <Box display={"Flex"} alignItems={"center"} gap="10px" >
                         <Text fontSize={'20px'} fontWeight={'500'}>Tovar kategoriyalari</Text>
                         <Button
 
