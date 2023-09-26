@@ -19,6 +19,7 @@ const TavartableStart = ({ title }) => {
   const handleClick = () => setopen(!open);
   const [data, setData] = useState([]);
 
+
   return (
     <Box>
       <Box display={"Flex"} alignItems={"center"} gap="10px" mt={"35px"}>
