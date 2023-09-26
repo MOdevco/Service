@@ -24,3 +24,4 @@ const NavbarLinksProps = ({ linkName, linkIcon, path }) => {
 };
 
 export default NavbarLinksProps;
+
