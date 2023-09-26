@@ -11,11 +11,12 @@ import {
     Button,
     Input,
   } from "@chakra-ui/react";
-  import {MdOutlineMoreVert} from 'react-icons/md'
+import {MdOutlineMoreVert} from 'react-icons/md'
 import axios from "axios";
 import { API } from "../../api";
 import { useToast } from '@chakra-ui/react'
 import { AiFillDelete, AiFillMinusCircle, AiFillPlusCircle, AiOutlineCheckCircle, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { Search2Icon } from "@chakra-ui/icons";
 
 const PropsTable = ({apiGet , apiPost , title , apiPostDoc}) => {
     const monthNames = [
@@ -44,6 +45,7 @@ const PropsTable = ({apiGet , apiPost , title , apiPostDoc}) => {
       const [fileName , setFileName] = useState("Yuklash")
       const [loading , setLoading] = useState(true)
       const [saveData , setSaveData] = useState(false)
+      const [search , setSearch] = useState('')
     
       const handleFile = (e) => {
         setFiles({...files, file: e.target.files[0]})
@@ -167,7 +169,7 @@ const PropsTable = ({apiGet , apiPost , title , apiPostDoc}) => {
   return (
     <Box pt={'-10px'} height={'73vh'} overflow={'auto'}>
         <Box position={'sticky'} top={0} zIndex={2} bg={'#F6F7FB'}>
-        <Box>
+          <Box>
           <Box display={"Flex"} mb={'10px'} alignItems={"center"} justifyContent={'space-between'} gap="10px" >
             <Box display={'flex'} alignItems={'center'}>
               <Text fontSize={'20px'} fontWeight={'500'}>{title}</Text>
@@ -187,10 +189,6 @@ const PropsTable = ({apiGet , apiPost , title , apiPostDoc}) => {
 
               </Button>
             </Box>
-              <Box display={'flex'} cursor={'pointer'}>
-                <AiOutlineLeft /> 
-                <AiOutlineRight />
-              </Box>
           </Box>
           
           </Box>
@@ -283,10 +281,13 @@ const PropsTable = ({apiGet , apiPost , title , apiPostDoc}) => {
                     </Button>}
                   </Box>
               </Box>
+              <Box border={'1px'} mb={'20px'} rounded={'10px'} borderColor={'#CECECE'} p={'10px'} display={'flex'} alignItems={'center'}>
+                <Search2Icon  color={'gray.500'}/>
+                <input onChange={(e) => setSearch(e.target.value)} type="" placeholder="qidirish..." className="filter" />
+              </Box>
             </Box>
         
-      )}
-     
+        )}
      
         </Box>
         <Table width={"100%"}  shadow={"0px 2px 8px 0px rgba(0, 0, 0, 0.12)"}rounded={"16px"} fontSize={"19px"}>
@@ -328,7 +329,10 @@ const PropsTable = ({apiGet , apiPost , title , apiPostDoc}) => {
                 </Tr>
                 </Thead>
                 <Tbody bg={'white'}>
-                {data.map((item, i) => (
+                {data.filter((item => {
+                    return search.toLowerCase() == '' ? item : item.name.toLowerCase().includes(search)
+                  }))
+                .map((item, i) => (
                     <Tr key={i} bg={i%2 == 1 ? '#F8F9FC' : ''}>
                     <Td>{i + 1}</Td>
                     <Td w={"50%"}>{item.name}</Td>
