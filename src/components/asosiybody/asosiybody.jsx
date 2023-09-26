@@ -96,7 +96,7 @@ const Asosiybody = () => {
           </TabPanel>
           <TabPanel maxWidth={"1832px"} m={"auto"}> 
           {/* TOVAR TURLARI */}
-            <PropsTable title={'Tovar turlari'} apiGet={'api/category'} apiPost={'api/category/new'} apiPostDoc={'api/category/upload'} />
+            <PropsTable  title={'Tovar turlari'} apiGet={'api/category'} apiPost={'api/category/new'} apiPostDoc={'api/category/upload'} />
           {/* TOVAR TURLARI */}
 
           </TabPanel>
@@ -123,7 +123,7 @@ const Asosiybody = () => {
 
                 <TabPanels>
                   <TabPanel>
-                    <TavarCatigoryEnd />
+                    <TavarCatigoryEnd title={'Kategoriya turlari'} />
                   </TabPanel>
                   <TabPanel>
                     <p>two!</p>
