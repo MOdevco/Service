@@ -39,25 +39,5 @@ p {
     background-color: transparent;
     outline: none;
     padding-left: 10px;
-<<<<<<< HEAD
 }
 
-.active{
-    color: #00C566 !important;
-=======
-    width: 100%;
-}
-
-.active {
-    color: green !important;
-}
-
-.inactive {
-    color: white;
-}
-
-.position {
-    position: sticky;
-    top: 95px;
->>>>>>> 394fad1c408b69fef1172fe333909b830c8a1b84
-}

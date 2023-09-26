@@ -54,8 +54,8 @@ const PropsTable = ({ apiGet, apiPost, title, apiPostDoc }) => {
     axios
       .get(`${API}${apiGet}`, {
         headers: {
-          // "ngrok-skip-browser-warning": true,
-          // "Access-Control-Allow-Origin": "*",
+          "ngrok-skip-browser-warning": true,
+          "Access-Control-Allow-Origin": "*",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       })
@@ -70,8 +70,8 @@ const PropsTable = ({ apiGet, apiPost, title, apiPostDoc }) => {
         "name": valueData
       }, {
         headers: {
-          // "ngrok-skip-browser-warning": true,
-          // "Access-Control-Allow-Origin": "*",
+          "ngrok-skip-browser-warning": true,
+          "Access-Control-Allow-Origin": "*",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       })
@@ -89,8 +89,8 @@ const PropsTable = ({ apiGet, apiPost, title, apiPostDoc }) => {
           axios
             .get(`${API}${apiGet}`, {
               headers: {
-                // "ngrok-skip-browser-warning": true,
-                // "Access-Control-Allow-Origin": "*",
+                "ngrok-skip-browser-warning": true,
+                "Access-Control-Allow-Origin": "*",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
               },
             })
@@ -121,8 +121,8 @@ const PropsTable = ({ apiGet, apiPost, title, apiPostDoc }) => {
     axios
       .post(`${API}${apiPostDoc}`, formData, {
         headers: {
-          // "ngrok-skip-browser-warning": true,
-          // "Access-Control-Allow-Origin": "*",
+          "ngrok-skip-browser-warning": true,
+          "Access-Control-Allow-Origin": "*",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       })
@@ -145,8 +145,8 @@ const PropsTable = ({ apiGet, apiPost, title, apiPostDoc }) => {
           axios
             .get(`${API}${apiGet}`, {
               headers: {
-                // "ngrok-skip-browser-warning": true,
-                // "Access-Control-Allow-Origin": "*",
+                "ngrok-skip-browser-warning": true,
+                "Access-Control-Allow-Origin": "*",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
               },
             })
@@ -167,7 +167,7 @@ const PropsTable = ({ apiGet, apiPost, title, apiPostDoc }) => {
       });
   }
   return (
-    <Box pt={'-10px'} height={'73vh'} overflow={'auto'}>
+    <Box pt={'-10px'} height={'78vh'} overflow={'auto'}>
       <Box position={'sticky'} top={0} zIndex={2} bg={'#F6F7FB'}>
         <Box>
           <Box display={"Flex"} mb={'10px'} alignItems={"center"} justifyContent={'space-between'} gap="10px" >
@@ -205,9 +205,7 @@ const PropsTable = ({ apiGet, apiPost, title, apiPostDoc }) => {
                     }
 
                   }}
-                  // width={"20%"}
                   placeholder="Ventilyator"
-                  // h={"2.7rem"}
                   size="md"
                   value={valueData}
                 />

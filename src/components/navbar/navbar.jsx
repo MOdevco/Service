@@ -10,7 +10,7 @@ function Navbar() {
           <Heading fontSize={"36px"} fontWeight={"500"} color={"#fff"}>
             iStore
           </Heading>
-          <NavbarLinks className={({ isActive }) => (isActive ? 'active' : 'inactive')} />
+          <NavbarLinks  />
         </Box>
       </Box>
     </Box>
