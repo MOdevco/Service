@@ -10,7 +10,7 @@ const Asosiybody = () => {
 
   
   return (
-    <Box p={'40px'} pt={'80px'} height={'100%'} width={'100%'}>
+    <Box p={'40px'} pt={'0px'} height={'100%'} width={'100%'}>
       {/* birinvhi table */}
       <Tabs  variant='red' >
         <TabList >
@@ -96,7 +96,7 @@ const Asosiybody = () => {
           </TabPanel>
           <TabPanel maxWidth={"1832px"} m={"auto"}> 
           {/* TOVAR TURLARI */}
-            <PropsTable title={'Tovar turlari'} apiGet={'api/category'} apiPost={'api/category/new'} apiPostDoc={'api/category/upload'} />
+            <PropsTable  title={'Tovar turlari'} apiGet={'api/category'} apiPost={'api/category/new'} apiPostDoc={'api/category/upload'} />
           {/* TOVAR TURLARI */}
 
           </TabPanel>

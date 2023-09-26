@@ -27,7 +27,7 @@ body {
 
 
 table tr { 
-    font-size: 14px;
+    font-size: 16px;
 }
 
 p {
@@ -39,4 +39,17 @@ p {
     background-color: transparent;
     outline: none;
     padding-left: 10px;
+}
+
+.active {
+    color: green !important;
+}
+
+.inactive {
+    color: white;
+}
+
+.position {
+    position: sticky;
+    top: 95px;
 }
