@@ -5,7 +5,7 @@ import NavbarLinksProps from "../navbarLinksProps/navbarLinksProps";
 function NavbarLinks() {
   return (
     <Box display={"flex"} alignItems={"center"} gap={"50px"}>
-      <NavbarLinksProps
+      <NavbarLinksProps className={({ isActive }) => (isActive ? 'active' : 'inactive')}
         linkName={"Asosiy ma’lumotlar"}
         linkIcon={coin}
         path={"/asosiy"}

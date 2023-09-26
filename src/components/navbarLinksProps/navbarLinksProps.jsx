@@ -1,12 +1,12 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { coin, coins, recive, report } from "../../assets";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavbarLinksProps = ({ linkName, linkIcon, path }) => {
   return (
     <Box display={"flex"} alignItems={"center"} gap={"50px"}>
-      <Link to={path}>
+      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to={path}>
         <Box
           display={"flex"}
           cursor={"pointer"}
@@ -18,7 +18,7 @@ const NavbarLinksProps = ({ linkName, linkIcon, path }) => {
             {linkName}
           </Text>
         </Box>
-      </Link>
+      </NavLink>
     </Box>
   );
 };
