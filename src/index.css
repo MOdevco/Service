@@ -35,3 +35,8 @@ p {
 }
 
 
+.filter {
+    background-color: transparent;
+    outline: none;
+    padding-left: 10px;
+}
