@@ -39,6 +39,7 @@ p {
     background-color: transparent;
     outline: none;
     padding-left: 10px;
+    width: 100%;
 }
 
 .active {

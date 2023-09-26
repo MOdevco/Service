@@ -168,11 +168,11 @@ const PropsTable = ({apiGet , apiPost , title , apiPostDoc}) => {
         });
       }
   return (
-    <Box pt={'-10px'} height={'73vh'} overflow={'auto'}>
+    <Box pt={'-10px'} height={'82vh'} overflow={'auto'}>
         <Box position={'sticky'} top={0} zIndex={2} bg={'#F6F7FB'}>
           <Box>
-          <Box display={"Flex"} mb={'10px'} alignItems={"center"} justifyContent={'space-between'}>
-            <Box display={'flex'} gap={'-10px'} alignItems={'center'}>
+          <Box display={"Flex"} mb={'10px'} alignItems={"center"}>
+            <Box display={'flex'}  alignItems={'center'}>
               <Text fontSize={'20px'} fontWeight={'500'}>{title}</Text>
               <Button
               display={'flex'}
@@ -303,7 +303,7 @@ const PropsTable = ({apiGet , apiPost , title , apiPostDoc}) => {
         <Box bg={'transparent'} position={'sticky'}  top={0} >
           <Box border={'1px'}   rounded={'10px'} borderColor={'#CECECE'} p={'10px'} mb={'30px'} display={'flex'} alignItems={'center'}>
             <Search2Icon  color={'gray.500'}/>
-            <input onChange={(e) => setSearch(e.target.value)} type="" placeholder="qidirish..." className="filter" />
+            <input onChange={(e) => setSearch(e.target.value)} type="" placeholder="Qidirish..." className="filter" />
           </Box>
 
         </Box>
