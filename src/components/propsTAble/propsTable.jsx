@@ -1,58 +1,56 @@
-import React, { useEffect, useState } from 'react'
+import { Box, Text } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
 import {
-  Table,
-  Thead,
-  Tbody,
-  Tr,
-  Th,
-  Td,
-  TableContainer,
-  Button,
-  Input,
-  Box,
-  Text,
-} from "@chakra-ui/react";
-import { MdOutlineMoreVert } from "react-icons/md";
-// import TavartableStart from '../tavartableStart/tavartableStart';
-import axios from 'axios';
-import { API } from '../../api';
-import { AiFillDelete, AiFillMinusCircle, AiFillPlusCircle, AiOutlineCheckCircle, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
+    Table,
+    Thead,
+    Tbody,
+    Tr,
+    Th,
+    Td,
+    TableContainer,
+    Button,
+    Input,
+  } from "@chakra-ui/react";
+  import {MdOutlineMoreVert} from 'react-icons/md'
+import axios from "axios";
+import { API } from "../../api";
 import { useToast } from '@chakra-ui/react'
+import { AiFillDelete, AiFillMinusCircle, AiFillPlusCircle, AiOutlineCheckCircle, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
-function TavarCatigory() {
-  const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  const d = new Date();
-  let name = monthNames[d.getMonth()];
-  const [open, setopen] = useState(false);
-  const handleClick = () => setopen(!open);
-  const [data, setData] = useState([]);
-  const [valueData , setVAlueData] = useState('')
-  const [validateDate , setValiDate] = useState(false)
-  const toast = useToast()
-  const [files , setFiles] = useState({file: ''})
-  const [fileName , setFileName] = useState("Yuklash")
-  const [loading , setLoading] = useState(true)
-  const [saveData , setSaveData] = useState(false)
-
-  const handleFile = (e) => {
-    setFiles({...files, file: e.target.files[0]})
-  }
+const PropsTable = ({apiGet , apiPost , title , apiPostDoc}) => {
+    const monthNames = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      const d = new Date();
+      let name = monthNames[d.getMonth()];
+      const [open, setopen] = useState(false);
+      const handleClick = () => setopen(!open);
+      const [data, setData] = useState([]);
+      const [valueData , setVAlueData] = useState('')
+      const [validateDate , setValiDate] = useState(false)
+      const toast = useToast()
+      const [files , setFiles] = useState({file: ''})
+      const [fileName , setFileName] = useState("Yuklash")
+      const [loading , setLoading] = useState(true)
+      const [saveData , setSaveData] = useState(false)
+    
+      const handleFile = (e) => {
+        setFiles({...files, file: e.target.files[0]})
+      }
     useEffect(() => {
         axios
-          .get(`${API}api/category-types`, {
+          .get(`${API}${apiGet}`, {
             headers: {
               // "ngrok-skip-browser-warning": true,
               // "Access-Control-Allow-Origin": "*",
@@ -60,14 +58,13 @@ function TavarCatigory() {
             },
           })
           .then((res) => {
-            setData(res.data);
+            setData(res.data);  
           });
       }, []);
 
-
       const handleSubmit = () => {
         axios
-        .post(`${API}api/category-types/new`,  {
+        .post(`${API}${apiPost}`,  {
           "name": valueData
         }, {
           headers: {
@@ -88,7 +85,7 @@ function TavarCatigory() {
               isClosable: true,
             })
               axios
-              .get(`${API}api/category-types`, {
+              .get(`${API}${apiGet}`, {
                 headers: {
                   // "ngrok-skip-browser-warning": true,
                   // "Access-Control-Allow-Origin": "*",
@@ -120,7 +117,7 @@ function TavarCatigory() {
           setLoading(true)
         }
         axios
-        .post(`${API}api/category-types/upload`, formData, {
+        .post(`${API}${apiPostDoc}`, formData, {
           headers: {
             // "ngrok-skip-browser-warning": true,
             // "Access-Control-Allow-Origin": "*",
@@ -144,7 +141,7 @@ function TavarCatigory() {
               isClosable: true,
             })
               axios
-              .get(`${API}api/category-types`, {
+              .get(`${API}${apiGet}`, {
                 headers: {
                   // "ngrok-skip-browser-warning": true,
                   // "Access-Control-Allow-Origin": "*",
@@ -168,12 +165,12 @@ function TavarCatigory() {
         });
       }
   return (
-    <Box>
-      <Box>
+    <Box pt={'-10px'} height={'73vh'} overflow={'auto'}>
+        <Box position={'sticky'} top={0} zIndex={2} bg={'#F6F7FB'}>
         <Box>
-          <Box display={"Flex"} mb={'10px'} alignItems={"center"} justifyContent={'space-between'} gap="10px" mt={"35px"}>
+          <Box display={"Flex"} mb={'10px'} alignItems={"center"} justifyContent={'space-between'} gap="10px" >
             <Box display={'flex'} alignItems={'center'}>
-              <Text fontSize={'20px'} fontWeight={'500'}>Tovar kategoriyalari</Text>
+              <Text fontSize={'20px'} fontWeight={'500'}>{title}</Text>
               <Button
               display={'flex'}
                 pt={'8px'}
@@ -208,7 +205,7 @@ function TavarCatigory() {
                       } else {
                         setVAlueData(e.target.value)
                       }
-                    
+                     
                     }}
                     // width={"20%"}
                     placeholder="Ventilyator"
@@ -273,7 +270,7 @@ function TavarCatigory() {
                       {saveData &&< AiOutlineCheckCircle color="white" fontSize={'25px'} /> }
                     </Button>}
 
-                  {!loading && <Button
+                   {!loading && <Button
                       isLoading
                       loadingText='Yuklanmoqda...'
                       spinnerPlacement='end'
@@ -289,78 +286,75 @@ function TavarCatigory() {
             </Box>
         
       )}
-    
-    
-      </Box>
-      <TableContainer shadow={"0px 2px 8px 0px rgba(0, 0, 0, 0.12)"}>
-        <Table width={"100%"} rounded={"16px"} fontSize={"19px"}>
-          <Thead >
-            <Tr bg="#F1F3F9">
-              <Th
-                fontWeight={"bold"}
-                color={"#1D2433"}
-                textTransform={"capitalize"}
-                fontSize={"17px"}
-              >
-                №
-              </Th>
-              <Th
-                fontWeight={"bold"}
-                color={"#1D2433"}
-                textTransform={"capitalize"}
-                fontSize={"17px"}
-              >
-                {" "}
-                Nomi
-              </Th>
-              <Th
-                fontWeight={"bold"}
-                color={"#1D2433"}
-                textTransform={"capitalize"}
-                fontSize={"17px"}
-              >
-                Qo’shilgan sana
-              </Th>
-              <Th
-                fontWeight={"bold"}
-                color={"#1D2433"}
-                textTransform={"capitalize"}
-                fontSize={"17px"}
-              >
-                User
-              </Th>
-              <Th></Th>
-            </Tr>
-          </Thead>
-          <Tbody bg={'white'}>
-            {data.map((item, i) => (
-              <Tr key={i} bg={i%2 == 1 ? '#F8F9FC' : ''}>
-                <Td>{i + 1}</Td>
-                <Td w={"50%"}>{item.name}</Td>
-                <Td>
-                  {String(item.date).slice(0, 4) +
-                    " " +
-                    `${name}` +
-                    " " +
-                    String(item.date).slice(8, 10) +
-                    " " +
-                    String(item.date).slice(11, 16)}
-                </Td>
-                <Td>Komiljon Soliyev Xaydarovich</Td>
-                <Td
-                  display={"flex"}
-                  alignItems={"flex-end"}
-                  justifyContent={"flex-end"}
-                >
-                  <MdOutlineMoreVert size={"29px"} />
-                </Td>
-              </Tr>
-            ))}
-          </Tbody>
+     
+     
+        </Box>
+        <Table width={"100%"}  shadow={"0px 2px 8px 0px rgba(0, 0, 0, 0.12)"}rounded={"16px"} fontSize={"19px"}>
+                <Thead position={'sticky'} top={10} zIndex={1}>
+                <Tr bg="#F1F3F9">
+                    <Th
+                    fontWeight={"bold"}
+                    color={"#1D2433"}
+                    textTransform={"capitalize"}
+                    fontSize={"17px"}
+                    >
+                    №
+                    </Th>
+                    <Th
+                    fontWeight={"bold"}
+                    color={"#1D2433"}
+                    textTransform={"capitalize"}
+                    fontSize={"17px"}
+                    >
+                    Nomi
+                    </Th>
+                    <Th
+                    fontWeight={"bold"}
+                    color={"#1D2433"}
+                    textTransform={"capitalize"}
+                    fontSize={"17px"}
+                    >
+                    Qo’shilgan sana
+                    </Th>
+                    <Th
+                    fontWeight={"bold"}
+                    color={"#1D2433"}
+                    textTransform={"capitalize"}
+                    fontSize={"17px"}
+                    >
+                    User
+                    </Th>
+                    <Th></Th>
+                </Tr>
+                </Thead>
+                <Tbody bg={'white'}>
+                {data.map((item, i) => (
+                    <Tr key={i} bg={i%2 == 1 ? '#F8F9FC' : ''}>
+                    <Td>{i + 1}</Td>
+                    <Td w={"50%"}>{item.name}</Td>
+                    <Td>
+                        {String(item.date).slice(0, 4) +
+                        " " +
+                        `${name}` +
+                        " " +
+                        String(item.date).slice(8, 10) +
+                        " " +
+                        String(item.date).slice(11, 16)}
+                    </Td>
+                    <Td>Komiljon Soliyev Xaydarovich</Td>
+                    <Td
+                        display={"flex"}
+                        alignItems={"flex-end"}
+                        justifyContent={"flex-end"}
+                    >
+                        <MdOutlineMoreVert size={"29px"} />
+                    </Td>
+                    </Tr>
+                ))}
+                </Tbody>
         </Table>
-      </TableContainer>
     </Box>
   )
 }
 
-export default TavarCatigory
+export default PropsTable

@@ -1,22 +1,18 @@
 import React from "react";
-import { Tabs, TabList, TabPanels, Tab, TabPanel, TabIndicator } from '@chakra-ui/react'
-import TableSotuv from "../tableSotuv/tableSotuv";
-import TavarCatigoryTab from "../tavarCatigoryTab/tavarCatigoryTab";
-import TavarCatigory from "../tavarCatigory/tavarCatigory";
+import { Tabs, TabList, TabPanels, Tab, TabPanel} from '@chakra-ui/react'
 import TavarCatigoryEnd from "../tavarCatigoryEnd/tavarCatigoryEnd";
 import { Box } from "@chakra-ui/react";
-import SotuvMiqdori from "../sotuvMiqdori/sotuvMiqdori";
 import TovarFirmalar from "../tovarFirmalar/tovarFirmalar";
-import Lavozimlar from "../lavozimlar/lavozimlar";
+import PropsTable from "../propsTAble/propsTable";
 
 const Asosiybody = () => {
 
 
   
   return (
-    <Box p={'50px'} pt={'70px'} width={'100%'}>
+    <Box p={'40px'} pt={'80px'} height={'100%'} width={'100%'}>
       {/* birinvhi table */}
-      <Tabs  variant='red'>
+      <Tabs  variant='red' >
         <TabList >
           <Tab
             fontSize={"20px"}
@@ -84,9 +80,26 @@ const Asosiybody = () => {
         </TabList>
         
         <TabPanels >
-          <TabPanel maxWidth={"1832px"} m={"auto"}> <TableSotuv /> </TabPanel>
-          <TabPanel maxWidth={"1832px"} m={"auto"}> <TavarCatigory /> </TabPanel>
-          <TabPanel maxWidth={"1832px"} m={"auto"}> <TavarCatigoryTab /></TabPanel>
+          <TabPanel  maxWidth={"1832px"} m={"auto"}>
+            <Box > 
+              {/* TOVAR SOTILADIGAN QURULMALAR */}
+              <PropsTable title={'Tovar sotiladigan qurilmalar'} apiGet={'api/device-type'} apiPost={'api/device-type/new'} apiPostDoc={'api/device-type/upload'} />
+              {/* TOVAR SOTILADIGAN QURULMALAR */}
+
+            </Box>
+          </TabPanel>
+          <TabPanel maxWidth={"1832px"} m={"auto"}> 
+          {/* TOVAR KATEGORIYALARI */}
+            <PropsTable title={'Tovar kategoriyalar'}  apiGet={'api/category-types'} apiPost={'api/category-types/new'} apiPostDoc={'api/category-types/upload'}/>
+          {/* TOVAR KATEGORIYALARI */}
+
+          </TabPanel>
+          <TabPanel maxWidth={"1832px"} m={"auto"}> 
+          {/* TOVAR TURLARI */}
+            <PropsTable title={'Tovar turlari'} apiGet={'api/category'} apiPost={'api/category/new'} apiPostDoc={'api/category/upload'} />
+          {/* TOVAR TURLARI */}
+
+          </TabPanel>
           <TabPanel maxWidth={"1832px"} m={"auto"}> 
             <Box >
               <Tabs colorScheme='blue'>
@@ -123,7 +136,10 @@ const Asosiybody = () => {
             </Box>
           </TabPanel>
           <TabPanel maxWidth={"1832px"} m={"auto"}> 
-            <SotuvMiqdori />
+          {/* SOTUV TURLARI */}
+            <PropsTable title={'Sotuv miqdor turlari'} apiGet={'api/unit'} apiPost={'api/unit/new'} apiPostDoc={'api/unit/upload'} />
+          {/* SOTUV TURLARI */}
+
           </TabPanel>
 
           <TabPanel maxWidth={"1832px"} m={"auto"}> 
@@ -131,7 +147,10 @@ const Asosiybody = () => {
           </TabPanel>
 
           <TabPanel maxWidth={"1832px"} m={"auto"}> 
-            <Lavozimlar />
+          {/* LAVOZIMLAR */}
+            <PropsTable title={'Lavozimlar'} apiGet={'api/stuff'} apiPost={'api/stuff/new'} />
+          {/* LAVOZIMLAR */}
+
           </TabPanel>
 
         </TabPanels>
