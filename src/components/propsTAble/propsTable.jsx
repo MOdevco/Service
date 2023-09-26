@@ -207,7 +207,7 @@ const PropsTable = ({apiGet , apiPost , title , apiPostDoc}) => {
                      
                     }}
                     // width={"20%"}
-                    placeholder="Ventilyator"
+                    placeholder="Nomi..."
                     // h={"2.7rem"}
                     size="md"
                     value={valueData}
@@ -297,6 +297,10 @@ const PropsTable = ({apiGet , apiPost , title , apiPostDoc}) => {
                       Continue
                     </Button>}
                   </Box>
+              </Box>
+              <Box border={'1px'} mb={'20px'} rounded={'10px'} borderColor={'#CECECE'} p={'10px'} display={'flex'} alignItems={'center'}>
+                <Search2Icon  color={'gray.500'}/>
+                <input onChange={(e) => setSearch(e.target.value)} type="" placeholder="Qidirish..." className="filter" />
               </Box>
             </Box>
         )}

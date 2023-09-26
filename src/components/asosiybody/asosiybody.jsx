@@ -10,7 +10,7 @@ const Asosiybody = () => {
 
   
   return (
-    <Box p={'40px'} pt={'80px'} height={'100%'} width={'100%'}>
+    <Box p={'40px'} pt={'0px'} height={'100%'} width={'100%'}>
       {/* birinvhi table */}
       <Tabs  variant='red' >
         <TabList >
