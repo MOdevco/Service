@@ -123,7 +123,7 @@ const Asosiybody = () => {
 
                 <TabPanels>
                   <TabPanel>
-                    <TavarCatigoryEnd />
+                    <TavarCatigoryEnd title={'Kategoriya turlari'} />
                   </TabPanel>
                   <TabPanel>
                     <p>two!</p>

@@ -6,7 +6,7 @@ import { Link, NavLink } from "react-router-dom";
 const NavbarLinksProps = ({ linkName, linkIcon, path }) => {
   return (
     <Box display={"flex"} alignItems={"center"} gap={"50px"}>
-      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to={path}>
+      <NavLink to={path}>
         <Box
           display={"flex"}
           cursor={"pointer"}
@@ -14,7 +14,7 @@ const NavbarLinksProps = ({ linkName, linkIcon, path }) => {
           gap={"14px"}
         >
           <Image src={linkIcon} />
-          <Text color={"#fff"} fontSize={"20px"} fontWeight={"500"}>
+          <Text  color={"#fff"} fontSize={"20px"} fontWeight={"500"} >
             {linkName}
           </Text>
         </Box>
